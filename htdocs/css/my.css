@@ -1,0 +1,651 @@
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Console", Monaco, monospace, serif;
+    font-size: 16px;
+    background: #eff9f9;
+    background-image: url(data:image/png;base64,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);
+    word-wrap: break-word;
+    text-align: center;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#container {
+    min-height:100%;
+    position:relative;
+}
+
+#body {
+    padding-bottom:50px;   /* Height of the footer */
+}
+
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;   /* Height of the footer */
+    font-size: 12px;
+}
+
+.contactMe {
+    font-size: 48px;
+    margin: 0;
+}
+
+select {
+    font-size: 16px;
+    background-color: #d9d9d9;
+    color: #212121;
+    border-radius: 3px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-top: 1px solid #A9A9A9;
+    margin: 16px 0;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #0066cc;
+    border-bottom: 1px solid #b3b3b3;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #660066;
+}
+
+a:visited:hover {
+    border-bottom: 1px solid #660066;
+}
+
+.allProfsLink {
+    display: inline-block;
+    margin: 10px;
+}
+
+#allProfsList {
+    margin-bottom: 50px;
+}
+
+a:hover  {
+    border-bottom: 1px solid #0059b3;
+
+}
+
+#slogan a{
+    color: inherit;
+    border: none;
+}
+
+#slogan a:hover {
+    border: none;
+}
+
+.navbar {
+    text-align: center;
+    font-size: 16px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #808080;
+    box-shadow: 2px 2px 5px 1px rgba(179,179,179,1);
+    border-radius: 0px 0px 3px 3px;
+    background: linear-gradient(#999, #808080);
+}
+
+.navbar ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0 0 3px 3px;
+    display: inline-block;
+    font-size: 0;
+}
+
+.navbar li {
+    display: inline;
+    font-size: 16px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 15px;
+    color: #fff;
+    border: none;
+}
+
+.navbar a:hover {
+    border: none;
+    background-color: #999999;
+
+    background: linear-gradient(#808080, #404040);
+    background-color: #809fff;
+    border-bottom: none;
+}
+
+.navbar a:visited {
+    color: #FFF;
+}
+
+#links > li:nth-child(1) > a:nth-child(1):hover {
+    border-bottom-left-radius: 3px;
+}
+
+#lang > li:nth-child(3) > a:nth-child(1):hover {
+    border-bottom-right-radius: 3px;
+}
+
+#links li {
+    text-transform: uppercase;
+}
+
+input[type='text'] {
+    background-color: #d9d9d9;
+    color: #212121;
+    border: solid 1px grey;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+input[type=text]:focus {
+    border-color: #A5C2D9;
+    box-shadow: 0 0 10px #A5C2D9;
+}
+
+textarea:focus {
+    border-color: #A5C2D9;
+    box-shadow: 0 0 10px #A5C2D9;
+}
+
+#addProfForm input[type='text'] {
+    background-color: #f2f2f2;
+}
+
+input[type='submit'] {
+    width: 150px;
+    border-radius: 3px;
+}
+
+.uniAndCourse {
+    text-align: left;
+    font-size: 14px;
+    padding: 8px 16px;
+    max-width: 80%;
+}
+
+.uniAndCourse td {
+    vertical-align: top;
+}
+
+.university, .course {
+    text-transform: uppercase;
+}
+
+.comment {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.commentText {
+    padding: 8px 16px;
+}
+
+.addCommentForm {
+    min-width: 320px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    padding-top: 8px;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.addCommentForm input[type='text'] {
+    width: 90%;
+}
+
+#slogan a{
+    font-size: 28px;
+    text-decoration: none;
+}
+
+#searchForm {
+    margin-top: 30px;;
+    margin-bottom: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#databaseLink {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+#searchName {
+    background-color: #f2f2f2;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 90%;
+    resize: none;
+    min-height: 200px;
+    background-color: #d9d9d9;
+    color: #212121;
+    font-size: 16px;
+    overflow-y: scroll;
+    border: solid 1px grey;
+}
+
+#angle {
+    margin-bottom: 15px;
+}
+
+#error {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #cc0000;
+}
+
+.button {
+    display: inline-block;
+    outline: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+a.button:visited {
+    color: #fff !important;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.greyButton {
+    background-color: #0059B3;
+    border: 0;
+}
+
+.greenButton {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: solid 1px green;
+    background-color: #00b300;
+}
+
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border: 0;
+}
+
+.specialHeading {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.shadowed {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.blackOnWhite {
+    color: #000;
+    background-color: #FFF;
+}
+
+.centered {
+    text-align: center;
+}
+
+#slogan {
+    clear: both;
+    color: #FFF;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 2px 2px 7px 2px rgba(90, 90, 90, 0.4);
+    background-color: rgba(176, 221, 245, 0.4);
+    color: #444 !important;
+    font-family: Verdana,sans-serif;;
+
+}
+
+.enterName {
+    padding-top: 18px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#userUni {
+    color: #00A300;
+}
+
+.date {
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+#lastComments{
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    padding-bottom:15px;
+    margin-bottom: 80px;
+    border-radius: 3px;
+
+}
+#lastComments td, th{
+    padding: 7px 20px;
+    border: 1px solid #b2b2b2;
+}
+
+#lastComments th {
+    text-align: center;
+}
+
+.shortComment {
+    text-align: left;
+}
+
+#about {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    border-radius: 3px;
+}
+
+#about p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.addCommentForm select {
+    width: 90%;
+}
+
+.dateTime {
+    text-align: center !important;
+    width: 30%;
+}
+
+#searchResults a {
+    display: inline-block;
+    margin: 10px;
+}
+
+label {
+    padding: 10px;
+}
+
+.emoticon {
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.divider {
+    width:500px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+}
+
+.divider hr {
+    margin-left:auto;
+    margin-right:auto;
+    width:45%;
+
+}
+
+.hrLeft {
+    float:left;
+}
+
+.hrText {
+    color: #8c8c8c;
+    font-size: 18px;
+}
+
+.hrRight {
+    float:right;
+}
+
+@media only screen and (max-width:799px){
+
+    #lastComments, #about {
+	border: none !important;
+    }
+
+    #lastComments td, th{
+	padding: 7px 20px;
+	border: none;
+    }
+
+    #lastComments tr {
+	border-bottom: 1px solid #b2b2b2;
+    }
+
+    #pipe {
+	display: none;
+    }
+
+    .navbar {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 5px;;
+    }
+
+    #links, #lang {
+	flex: 1 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    }
+
+    .navbar li a, .navbar li a:hover {
+		      border: none !important;
+		  }
+}
+
+@media only screen and (max-width:601px){
+
+    body {
+	font-size: 13px;
+    }
+
+    h1, h2, h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+    }
+
+    h1 {
+	font-size: 18px;
+    }
+
+    h2 {
+	font-size: 16px;
+    }
+
+    h3 {
+	font-size: 14px;
+    }
+
+    #slogan {
+	font-size: 16px;
+    }
+
+    .specialHeading {
+	margin-top: 15px;
+	margin-bottom: 15px;
+    }
+
+    .navbar {
+	font-size: 14px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+    }
+
+    #links li {
+	display: block;
+	width: 100%;
+	position:relative;
+    }
+
+    #links li a {
+	display: block;
+	border: none;
+	width:auto;
+    }
+
+    .navbar li a:hover {
+	border: none;
+    }
+
+    .addCommentForm {
+	width: 100%;
+    }
+
+    #searchForm {
+	margin-bottom: 20px;
+    }
+
+    .enterName {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+    }
+
+    #angle {
+	margin-bottom: 5px;
+    }
+
+    .button {
+	font-size: 12px;
+    }
+
+    .greenButton {
+	margin-top: 14px;
+	margin-bottom: 14px;
+    }
+
+    #lastComments {
+	max-width: 90%;
+    }
+
+    #lastComments td, th {
+	padding: 5px 5px;
+    }
+
+    textarea {
+	min-height: 120px;
+	font-size: 16px;
+    }
+
+    input[type='text'] {
+	font-size: 16px;
+	max-width: 100%;
+	padding-left: 5px;
+	padding-right: 5px;
+    }
+
+    #links, #lang {
+	margin-top: 0px;
+	margin-bottom: 10px;
+    }
+
+    .addCommentForm {
+	min-width: 100%;
+	max-width: 100%;
+    }
+
+    table, thead, tbody, td, tr {
+	width: 100% !important;
+	display: block;
+	text-align: center !important;
+    }
+
+    #lastComments th {
+	display: none;
+    }
+
+    #impressionRadioButtons {
+	font-size: 10px;
+    }
+
+    .navbar, .navbar ul {
+	border-radius: 0;
+    }
+
+    #links > li:nth-child(1) > a:nth-child(1):hover {
+	border-radius: 0px;
+    }
+
+    #lang > li:nth-child(3) > a:nth-child(1):hover {
+	border-radius: 0px;
+    }
+
+    .divider {
+	display: none;
+    }
+}

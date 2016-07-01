@@ -1,0 +1,296 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Marjana Voronina
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0\n"
+"Report-Msgid-Bugs-To: Marjana Voronina <marjana.voronina@gmail.com>\n"
+"POT-Creation-Date: 2016-06-19 16:33+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../cgi-bin/oppejoud.pl:161
+msgid "Professor's name can't be blank."
+msgstr "Õppejõu nimi ei tohi olla tühi."
+
+#: ../cgi-bin/oppejoud.pl:163
+msgid "Please choose or enter a university."
+msgstr "Palun vali või sisesta ülikool."
+
+#: ../cgi-bin/oppejoud.pl:165
+msgid "Please enter a course name."
+msgstr "Palun sisesta õppeaine."
+
+#: ../cgi-bin/oppejoud.pl:167
+msgid "Please enter a comment."
+msgstr "Palun sisesta kommentaar."
+
+#: ../cgi-bin/oppejoud.pl:169 ../cgi-bin/oppejoud.pl:296
+#: ../cgi-bin/oppejoud.pl:349
+msgid "Only letters, hyphens and spaces are allowed."
+msgstr "Lubatud on ainult tähed, sidekriips ja tühikud."
+
+#: ../cgi-bin/oppejoud.pl:171
+#, perl-brace-format
+msgid "Comment can't be longer than {count} symbols."
+msgstr "Kommentaar ei tohi olla pikem kui {count} sümbolit."
+
+#: ../cgi-bin/oppejoud.pl:173
+#, perl-brace-format
+msgid "Course name can't be longer than {count} symbols."
+msgstr "Aine nimi ei tohi olla pikem kui {count} sümbolit."
+
+#: ../cgi-bin/oppejoud.pl:175
+msgid "Unacceptable radiobutton value."
+msgstr "Mittesobiv raadionupu väärtus."
+
+#: ../cgi-bin/oppejoud.pl:235
+msgid "Or see the database"
+msgstr "Või vaata andmebaasi"
+
+#: ../cgi-bin/oppejoud.pl:236
+msgid "Want to know what others say about your professor?"
+msgstr "Soovid teada, mis teised su tulevasest õppejõust räägivad?"
+
+#: ../cgi-bin/oppejoud.pl:237
+msgid "Want to share your experience with other students?"
+msgstr "Tahad oma kogemusi teiste tudengitega jagada?"
+
+#: ../cgi-bin/oppejoud.pl:238
+msgid "You are in the right place!"
+msgstr "Siis oled Sa õiges kohas."
+
+#: ../cgi-bin/oppejoud.pl:242 ../cgi-bin/oppejoud.pl:420
+msgid "About the project"
+msgstr "Projektist"
+
+#: ../cgi-bin/oppejoud.pl:244
+msgid ""
+"We are all different, and our goals are different as well. Some decide to go "
+"the easy way, while others prefer challenges.\n"
+"Unfortunately, studying programmes are not perfect and do not account for "
+"students' special needs."
+msgstr ""
+"Kõik me oleme erinevad ja meie eesmärgid on ka erinevad. Mõni tahab minna "
+"kergemat teed, mõni raskemat. Kahjuks aga õppekavad ei ole alati perfektselt "
+"koostatud ning tudengite erisoovidega tihti ei arvestata."
+
+#: ../cgi-bin/oppejoud.pl:246
+msgid ""
+"There were times when I wished professors demanded more from me (when the "
+"course was interesting and useful), other\n"
+"times I wished the requirements were lower. Harsh reality is that courses "
+"that are not compulsory for my profession took most of the time,\n"
+"leaving absolutely required courses in the background."
+msgstr ""
+"Olen ise kokku puutunud situatsioonidega, kus tahaks, et õppejõud nõuaks "
+"rohkem (kui aine oli huvitav ja mulle vajalik)  või vastupidi oleks "
+"tudengite suhtes leebem. Karm reaalsus aga on sundinud teinekord rohkem aega "
+"pühendama üldainetele, erialaained aga olid tagaplaanil."
+
+#: ../cgi-bin/oppejoud.pl:249
+msgid ""
+"Today students in most universities are allowed not only to create their own "
+"schedules, but also to choose professors.\n"
+"This led me to a thought that it should be possible to “meet” your professor "
+"before you actually start attending the lectures."
+msgstr ""
+"Kuna tänapäeval saavad tudengid paljudes ülikoolides ise oma tunniplaani "
+"koostada ja õppejõude valida, tekkis mõte, et tudengitel peaks olema "
+"võimalus “tutvuda” õppejõududega enne seda kui nad loengusse tulevad."
+
+#: ../cgi-bin/oppejoud.pl:251
+msgid ""
+"Right now there are not enough feedbacks about Estonian professors on the "
+"Internet. I am hoping this project will\n"
+"improve the situation."
+msgstr ""
+"Hetkel on internetis äärmiselt vähe arvamusi eesti õppejõudude kohta. "
+"Loodan, et tänu sellele projektile olukord paraneb."
+
+#: ../cgi-bin/oppejoud.pl:253
+msgid ""
+"The main goal of this project is not to rate professors according to some "
+"scale. There are no perfect or bad professors,\n"
+" you just have to find one that suits you."
+msgstr ""
+"Antud projekti eesmärk ei seisne selles, et õppejõude mingi skaala abil "
+"hinnata. Ei ole ideaalseid ega halbu õppejõude, tuleb vaid leida endale "
+"sobiv."
+
+#: ../cgi-bin/oppejoud.pl:260
+msgid "Recent comments:"
+msgstr "Hiljutised kommentaarid:"
+
+#: ../cgi-bin/oppejoud.pl:267
+msgid "Time added"
+msgstr "Lisamise aeg"
+
+#: ../cgi-bin/oppejoud.pl:268
+msgid "Professor"
+msgstr "Õppejõud"
+
+#: ../cgi-bin/oppejoud.pl:269
+msgid "Comment"
+msgstr "Kommentaar"
+
+#: ../cgi-bin/oppejoud.pl:282 ../cgi-bin/oppejoud.pl:421
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ../cgi-bin/oppejoud.pl:283
+msgid "Your comments and suggestions are welcome."
+msgstr "Küsimused ja ettepanekud on oodatud."
+
+#: ../cgi-bin/oppejoud.pl:292
+#, perl-brace-format
+msgid "Please enter at least {count} symbols."
+msgstr "Palun sisesta vähemalt {count} sümbolit."
+
+#: ../cgi-bin/oppejoud.pl:294
+#, perl-brace-format
+msgid "Query can't be longer than {count} symbols."
+msgstr "Päring ei tohi olla pikem kui {count} sümbolit."
+
+#: ../cgi-bin/oppejoud.pl:298
+#, perl-brace-format
+msgid "Search results ({name}):"
+msgstr "Otsingu tulemused ({name}):"
+
+#: ../cgi-bin/oppejoud.pl:312
+msgid "Sorry, nothing was found."
+msgstr "Sisestatud otsingusõnale ei leitud ühtegi vastet."
+
+#: ../cgi-bin/oppejoud.pl:314 ../cgi-bin/oppejoud.pl:326
+#: ../cgi-bin/oppejoud.pl:396 ../cgi-bin/oppejoud.pl:404
+msgid "Add a new professor!"
+msgstr "Lisa õppejõud!"
+
+#: ../cgi-bin/oppejoud.pl:324
+msgid "Error"
+msgstr "Viga"
+
+#: ../cgi-bin/oppejoud.pl:325
+#, perl-brace-format
+msgid "Nothing was found for your query ({name})."
+msgstr "Sisestatud otsingusõnale ({name}) ei leitud ühtegi vastet."
+
+#: ../cgi-bin/oppejoud.pl:345
+msgid "Please fill both fields."
+msgstr "Palun täida mõlemad väljad."
+
+#: ../cgi-bin/oppejoud.pl:355
+msgid "This professor already exists in the database."
+msgstr "Õppejõud on andmebaasis olemas."
+
+#: ../cgi-bin/oppejoud.pl:356
+msgid "View page"
+msgstr "Vaata"
+
+#: ../cgi-bin/oppejoud.pl:395
+msgid "All professors ({count}):"
+msgstr "Kõik õppejõud ({count}):"
+
+#: ../cgi-bin/oppejoud.pl:418
+msgid "Main page"
+msgstr "Pealeht"
+
+#: ../cgi-bin/oppejoud.pl:419
+msgid "Recent comments"
+msgstr "Hiljutised kommentaarid"
+
+#: ../cgi-bin/oppejoud.pl:434 ../cgi-bin/oppejoud.pl:485
+msgid "Find a perfectly suitable professor!"
+msgstr "Leia just Sulle sobiv õppejõud!"
+
+#: ../cgi-bin/oppejoud.pl:445
+msgid "Enter professor's name:"
+msgstr "Sisesta õppejõu nimi:"
+
+#: ../cgi-bin/oppejoud.pl:463
+msgid "SEARCH"
+msgstr "OTSI"
+
+#: ../cgi-bin/oppejoud.pl:476
+msgid "Couldn't find yours? Enter it manually."
+msgstr "Ülikool puudub nimekirjas? Sisesta ise:"
+
+#: ../cgi-bin/oppejoud.pl:505
+msgid "Add a new professor"
+msgstr "Lisa õppejõud"
+
+#: ../cgi-bin/oppejoud.pl:511
+msgid "Professor's name"
+msgstr "Õppejõu eesnimi"
+
+#: ../cgi-bin/oppejoud.pl:518
+msgid "Professor's lastname"
+msgstr "Õppejõu perekonnanimi"
+
+#: ../cgi-bin/oppejoud.pl:534
+msgid "ADD"
+msgstr "LISA"
+
+#: ../cgi-bin/oppejoud.pl:558
+#, perl-brace-format
+msgid "Professor: {name}"
+msgstr "Õppejõud: {name}"
+
+#: ../cgi-bin/oppejoud.pl:559
+msgid "Add a comment"
+msgstr "Lisa kommentaar"
+
+#: ../cgi-bin/oppejoud.pl:561
+msgid "Comments:"
+msgstr "Kommentaarid:"
+
+#: ../cgi-bin/oppejoud.pl:564
+msgid "Comments were not added yet."
+msgstr "Kommentaare veel ei ole."
+
+#: ../cgi-bin/oppejoud.pl:588 ../cgi-bin/oppejoud.pl:623
+msgid "University:"
+msgstr "Ülikool:"
+
+#: ../cgi-bin/oppejoud.pl:589
+msgid "Course:"
+msgstr "Õppeaine:"
+
+#: ../cgi-bin/oppejoud.pl:605
+msgid "Add your comment:"
+msgstr "Lisa oma kommentaar"
+
+#: ../cgi-bin/oppejoud.pl:625
+msgid "Course name:"
+msgstr "Õppeaine:"
+
+#: ../cgi-bin/oppejoud.pl:633
+msgid "Comment:"
+msgstr "Kommentaar:"
+
+#: ../cgi-bin/oppejoud.pl:643
+msgid "General impression:"
+msgstr "Üldine mulje:"
+
+#: ../cgi-bin/oppejoud.pl:649
+msgid "bad"
+msgstr "halb"
+
+#: ../cgi-bin/oppejoud.pl:649
+msgid "neutral"
+msgstr "neutraalne"
+
+#: ../cgi-bin/oppejoud.pl:649
+msgid "good"
+msgstr "hea"
+
+#: ../cgi-bin/oppejoud.pl:655
+msgid "SEND"
+msgstr "SAADA"
