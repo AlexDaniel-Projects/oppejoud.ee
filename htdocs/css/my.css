@@ -106,7 +106,7 @@ a:hover  {
     justify-content: space-between;
     background-color: #808080;
     box-shadow: 2px 2px 5px 1px rgba(179,179,179,1);
-    border-radius: 0px 0px 3px 3px;
+    border-radius: 0 0 3px 3px;
     background: linear-gradient(#999, #808080);
 }
 
@@ -600,7 +600,7 @@ label {
     }
 
     #links, #lang {
-	margin-top: 0px;
+	margin-top: 0;
 	margin-bottom: 10px;
     }
 
@@ -628,11 +628,11 @@ label {
     }
 
     #links > li:nth-child(1) > a:nth-child(1):hover {
-	border-radius: 0px;
+	border-radius: 0;
     }
 
     #lang > li:nth-child(3) > a:nth-child(1):hover {
-	border-radius: 0px;
+	border-radius: 0;
     }
 
     .divider {
