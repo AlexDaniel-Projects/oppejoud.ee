@@ -79,6 +79,11 @@ a:visited:hover {
     margin-bottom: 50px;
 }
 
+#allProfsUl {
+    list-style: none;
+    padding: 0;
+}
+
 a:hover  {
     border-bottom: 1px solid #0059b3;
 

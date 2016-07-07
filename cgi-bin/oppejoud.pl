@@ -341,13 +341,14 @@ elsif (getParam('action') eq 'add') {
     } else { #
 	printAddButton();
 	print $q->start_div({id => 'allProfsList'});
+	print $q->start_ul({id => 'allProfsUl'});
 	foreach (@files){
 	    utf8::decode($_);
 	    my $basename = basename($_, '.txt');
-	    print $q->a({class => 'allProfsLink', href => "?action=read&name=$basename"}, $basename);
-	    print $q->br();
+	    print $q->li(a({class => 'allProfsLink', href => "?action=read&name=$basename"}, $basename));
 	}
     }
+    print $q->end_ul();
     printAddButton();
     print $q->end_div();
     printEndHtml();
