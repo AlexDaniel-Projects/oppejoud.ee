@@ -477,6 +477,7 @@ sub printMeta {
         -style    => [{-src=>'/css/my.css'}, {-src=>'/css/awesomplete.css'}],
         );
     $html =~ s{<!DOCTYPE.*?>}{$dtd}s;
+    $html =~ s{<html.*?>}{<html lang="$ENV{LANGUAGE}">}s;
     print $html;
 }
 
