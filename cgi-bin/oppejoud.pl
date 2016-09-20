@@ -229,19 +229,19 @@ improve the situation.');
     my @lines = getRecentComments();
 
     if (scalar @lines > 0) {
-	print $q->start_table({-id => 'lastComments'});
-	print $q->Tr( $q->th(__ 'Time added'),
-		      $q->th(__ 'Professor'),
-		      $q->th(__ 'Comment') );
-	for (@lines) {
-	    my ($date, $time, $name, $comment) = split "\x1e", $_;
-	    print
-		$q->Tr( $q->td({-class => 'dateTime'},$date, ' ', $time),
-			$q->td($q->a({-href => "?action=read&name=$name"}, $name)),
-			$q->td({-class => 'shortComment'}, $comment)
-		);
-	}
-	print $q->end_table();
+        print $q->start_table({-id => 'lastComments'});
+        print $q->Tr( $q->th(__ 'Time added'),
+                      $q->th(__ 'Professor'),
+                      $q->th(__ 'Comment') );
+        for (@lines) {
+            my ($date, $time, $name, $comment) = split "\x1e", $_;
+            print
+                $q->Tr( $q->td({-class => 'dateTime'},$date, ' ', $time),
+                        $q->td($q->a({-href => "?action=read&name=$name"}, $name)),
+                        $q->td({-class => 'shortComment'}, $comment)
+                );
+        }
+        print $q->end_table();
     } else { print $q->p(__ 'No comments have been added yet.'); }
     printEndHtml();
 } elsif (getParam('action') eq 'contact') {
@@ -278,7 +278,7 @@ elsif (getParam('action') eq 'search') {
         } else {
             print $q->p({-id=>'error'}, __ 'Sorry, nothing was found.');
         }
-	printAddButton();
+        printAddButton();
     }
     printEndHtml();
 } elsif (getParam('action') eq 'read') {
@@ -290,7 +290,7 @@ elsif (getParam('action') eq 'search') {
     } else {
         print $q->h1(__ 'Error');
         print $q->p(__x "Nothing was found for your query ({name}).", name => $name);
-	printAddButton();
+        printAddButton();
     }
     printEndHtml();
 }
@@ -324,13 +324,13 @@ elsif (getParam('action') eq 'add') {
             } else {
                 lockOperation();
                 if ($fullName ne 'update all') {
-		    writeStringToFile($filename, '');
-		    my $userIP = $q->remote_host();
-		    my $dateTime = DateTime->from_epoch(epoch => time, time_zone => 'Europe/Tallinn');
-		    my $date = $dateTime->date;
-		    my $time = $dateTime->time;
-		    addNewProfDataToLog($date, $time, $fullName, $userIP);
-		}
+                    writeStringToFile($filename, '');
+                    my $userIP = $q->remote_host();
+                    my $dateTime = DateTime->from_epoch(epoch => time, time_zone => 'Europe/Tallinn');
+                    my $date = $dateTime->date;
+                    my $time = $dateTime->time;
+                    addNewProfDataToLog($date, $time, $fullName, $userIP);
+                }
 
                 if (! -d $allProfsListFolder) {
                     mkdir($allProfsListFolder);
@@ -366,16 +366,16 @@ elsif (getParam('action') eq 'add') {
     my $numberOfProfs = scalar @files;
     print $q->h1({class => 'specialHeading'}, __x('All professors ({count}):', count => $numberOfProfs));
     if ($numberOfProfs < 1) { #
-	print $q->p( __ 'No professors have been added yet.'); #
+        print $q->p( __ 'No professors have been added yet.'); #
     } else { #
-	printAddButton();
-	print $q->start_div({id => 'allProfsList'});
-	print $q->start_ul({id => 'allProfsUl'});
-	foreach (@files){
-	    utf8::decode($_);
-	    my $basename = basename($_, '.txt');
-	    print $q->li(a({class => 'allProfsLink', href => "?action=read&name=$basename"}, $basename));
-	}
+        printAddButton();
+        print $q->start_div({id => 'allProfsList'});
+        print $q->start_ul({id => 'allProfsUl'});
+        foreach (@files){
+            utf8::decode($_);
+            my $basename = basename($_, '.txt');
+            print $q->li(a({class => 'allProfsLink', href => "?action=read&name=$basename"}, $basename));
+        }
     }
     print $q->end_ul();
     printAddButton();
@@ -393,17 +393,17 @@ sub printNavbar {
     print $q->start_div({class=>'navbar'});
 
     my @links = (
-	{'?' => 'Main page'},
-	{'?action=changes' => 'Recent comments'},
-	{'?action=project' => 'About the project'},
-	{'?action=contact' => 'Contact'},
-	);
+        {'?' => 'Main page'},
+        {'?action=changes' => 'Recent comments'},
+        {'?action=project' => 'About the project'},
+        {'?action=contact' => 'Contact'},
+        );
 
     my @lang = (
-	{"?action=$action&lang=et" => 'EST'},
-	{"?action=$action&lang=ru" => 'RUS'},
-	{"?action=$action&lang=en" => 'ENG'},
-	);
+        {"?action=$action&lang=et" => 'EST'},
+        {"?action=$action&lang=ru" => 'RUS'},
+        {"?action=$action&lang=en" => 'ENG'},
+        );
 
     printNavbarUl('links', @links);
     printNavbarUl('lang', @lang);
@@ -422,9 +422,9 @@ sub printNavbarUl {
 sub printListItems {
     my (@array) = @_;
     for my $href ( @array ) {
-	for my $_ ( keys %$href ) {
-	    print li(a({href => $_}, __ $href->{$_}));
-	}
+        for my $_ ( keys %$href ) {
+            print li(a({href => $_}, __ $href->{$_}));
+        }
     }
 }
 
@@ -470,18 +470,18 @@ sub printListOfUniversities {
 
     my $allUnisFile = "$allUnisFolder/universities.txt";
     unless (-f $allUnisFile) {
-	writeStringToFile($allUnisFile, '');
+        writeStringToFile($allUnisFile, '');
     }
 
     my %universities = ();
 
     my ($ok, $storedIn) = readFile($allUnisFile);
     if (not $ok) {
-	commentError('Cannot read database. Please write to marjana.voronina@gmail.com'); # TODO
+        commentError('Cannot read database. Please write to marjana.voronina@gmail.com'); # TODO
     }
     if ($storedIn) {
-	$storedIn = $coder->decode($storedIn);
-	%universities =  %{$storedIn};
+        $storedIn = $coder->decode($storedIn);
+        %universities =  %{$storedIn};
     }
 
     my @values = map { $q->optgroup(-name => $_, -values => $universities{$_}) } sort keys %universities;
