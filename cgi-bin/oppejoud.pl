@@ -13,6 +13,7 @@ use DateTime;
 use Encode qw(decode encode);
 use JSON::XS;
 use open ':std', ':encoding(UTF-8)';
+use List::Util qw(min);
 
 $ENV{LC_ALL}='en_US.UTF-8';
 $ENV{LANGUAGE}='et';
@@ -164,6 +165,37 @@ if (getParam('action') eq 'write') {
         printCommentForm(1);
         printEndHtml();
     }
+
+} elsif (getParam('action') eq 'rss') {
+    print $q->header(
+        -charset  => 'UTF-8',
+        -type => 'text/xml'
+        );
+
+    # create an RSS 2.0 file
+    use XML::RSS;
+    my $rss = XML::RSS->new (version => '2.0');
+
+    $rss->channel(title          => 'oppejoud.ee',
+                  link           => 'http://oppejoud.ee',
+                  language       => 'en',
+                  description    => 'Find a perfectly suitable professor!',
+        );
+
+    my @lines = getRecentComments();
+    my $rss_limit = 200;
+
+    for (@lines[0..min($rss_limit - 1, $#lines)]) {
+        my ($date, $time, $name, $comment) = split "\x1e", $_;
+        $rss->add_item(title => $name,
+                       link => "https://oppejoud.ee/?action=read&name=$name",
+                       description => $comment
+            );
+    }
+
+    # print the RSS as a string
+    print $rss->as_string;
+    exit;
 
 } elsif (getParam('action') eq '') {
     printAllHeaders();
