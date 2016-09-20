@@ -194,11 +194,8 @@ improve the situation.');
 } elsif (getParam('action') eq 'changes') {
     printAllHeaders();
     print $q->h1({-class => 'specialHeading'}, __ 'Recent comments:');
-    mkdir($logFolder) unless -d $logFolder;
-    writeStringToFile($logFile, '') unless -e $logFile;
-    my $file = openFileForReading($logFile);
-    my @lines = reverse <$file>;
-    close($file);
+    my @lines = getRecentComments();
+
     if (scalar @lines > 0) {
 	print $q->start_table({-id => 'lastComments'});
 	print $q->Tr( $q->th(__ 'Time added'),
@@ -753,4 +750,13 @@ sub addNewProfDataToLog {
 
 sub printAddButton {
     print $q->a({-class => 'button greenButton', -href => '?action=add'}, __ 'Add a new professor!');
+}
+
+sub getRecentComments {
+    mkdir($logFolder) unless -d $logFolder;
+    writeStringToFile($logFile, '') unless -e $logFile;
+    my $file = openFileForReading($logFile);
+    my @lines = reverse <$file>;
+    close($file);
+    return @lines;
 }
