@@ -167,13 +167,21 @@ if (getParam('action') eq 'write') {
     }
 
 } elsif (getParam('action') eq 'rss') {
+
+    use XML::RSS;
+    use DateTime::Format::Strptime;
+
+    my $strp = DateTime::Format::Strptime->new(
+        pattern   => '%F %T',
+        time_zone => 'Europe/Tallinn',
+        );
+
     print $q->header(
         -charset  => 'UTF-8',
-        -type => 'text/xml'
+        -type     => 'text/xml'
         );
 
     # create an RSS 2.0 file
-    use XML::RSS;
     my $rss = XML::RSS->new (version => '2.0');
 
     $rss->channel(title          => 'oppejoud.ee',
@@ -187,9 +195,14 @@ if (getParam('action') eq 'write') {
 
     for (@lines[0..min($rss_limit - 1, $#lines)]) {
         my ($date, $time, $name, $comment) = split "\x1e", $_;
-        $rss->add_item(title => $name,
-                       link => "https://oppejoud.ee/?action=read&name=$name",
-                       description => $comment
+
+        my $pubDate = $strp->parse_datetime("$date $time")->strftime("%a, %d %b %Y %H:%M:%S %z"); # RFC822
+
+        $rss->add_item(
+            pubDate              => $pubDate,
+            title                => $name,
+            link                 => "https://oppejoud.ee/?action=read&name=$name",
+            description          => $comment
             );
     }
 
@@ -422,8 +435,8 @@ sub printNavbarUl {
 sub printListItems {
     my (@array) = @_;
     for my $href ( @array ) {
-        for my $_ ( keys %$href ) {
-            print li(a({href => $_}, __ $href->{$_}));
+        for my $key ( keys %$href ) {
+            print li(a({href => $key}, __ $href->{$key}));
         }
     }
 }
