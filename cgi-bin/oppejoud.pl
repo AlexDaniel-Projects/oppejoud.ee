@@ -514,11 +514,13 @@ sub printMeta {
     my $dtd      = '<!DOCTYPE html>';   # HTML5
     my $html = start_html(
         -head     => [
-             meta({-name => 'viewport', -content => 'width=device-width'}),
-             Link({-rel => 'alternate',
-                   -href => '/?action=rss',
-                   -type => 'application/rss+xml',
-                   -title => 'oppejoud.ee',
+             meta({-name    => 'viewport',
+                   -content => 'width=device-width',
+                  }),
+             Link({-rel     => 'alternate',
+                   -href    => '/?action=rss',
+                   -type    => 'application/rss+xml',
+                   -title   => 'oppejoud.ee',
                   }),
         ],
         -encoding => 'utf-8',
