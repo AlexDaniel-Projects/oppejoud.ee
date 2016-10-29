@@ -4,7 +4,7 @@ use warnings;
 use warnings qw(FATAL utf8);
 use v5.10;
 use utf8;
-use CGI qw(:standard start_ul);
+use CGI qw(:standard start_ul unescapeHTML);
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
 use File::Copy 'mv';
@@ -153,8 +153,9 @@ if (getParam('action') eq 'write') {
         writeStringToFile($teacherFile, $storedOut);
 
         if (length($comment) > 50) {
-            $comment = substr($comment, 0, 50) . '…';
+            $comment = escapeHTML(substr(unescapeHTML($comment), 0, 50)) . '…';
         }
+
         utf8::decode($comment);
 
         mkdir($logFolder) unless -d $logFolder;
