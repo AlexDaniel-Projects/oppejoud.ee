@@ -98,6 +98,8 @@ if (getParam('action') eq 'write') {
         commentError(__ 'Professor\'s name can\'t be blank.');
     } elsif ($uni eq '' or $uni eq undef) {
         commentError(__ 'Please choose or enter a university.');
+    } elsif (length($uni) > 100) {
+        commentError(__x 'University name can\'t be longer than {count} symbols.', count => 100);
     } elsif ($course eq '' or $course eq undef) {
         commentError(__ 'Please enter a course name.');
     } elsif ($comment eq '' or $comment eq undef) {
@@ -506,6 +508,7 @@ sub printListOfUniversities {
     print $q->p({-id => 'userUni'}, __ 'Couldn\'t find yours? Enter it manually.');
     print $q->textfield(
         -name     => 'userUni',
+        -maxlength => 100,
         -value    => getPreferredTextInputUni()
         );
 }
