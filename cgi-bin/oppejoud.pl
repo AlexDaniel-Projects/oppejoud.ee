@@ -217,14 +217,16 @@ if (getParam('action') eq 'write') {
     printAllHeaders();
     printSearchPanel();
     print $q->a({-id => 'databaseLink', -href => '?action=showAllProfessors'}, __ 'Or see the database');
+    print $q->start_div({-id => 'why'});
     print $q->p(__ 'Want to know what others say about your professor?');
     print $q->p(__ 'Want to share your experience with other students?');
     print $q->p(__ 'You are in the right place!');
+    print $q->end_div();
     printEndHtml();
 } elsif (getParam('action') eq 'project') {
     printAllHeaders();
     print $q->h1({-class => 'specialHeading'}, __ 'About the project');
-    print $q->start_div({-id => 'about'});
+    print $q->start_div({-id => 'about', -class => 'content'});
     print $q->p(__ 'We are all different, and our goals are different as well. Some decide to go the easy way, while others prefer challenges.
 Unfortunately, studying programmes are not perfect and do not account for students\' special needs.');
     print $q->p(__ 'There were times when I wished professors demanded more from me (when the course was interesting and useful), other
@@ -245,7 +247,7 @@ improve the situation.');
     my @lines = getRecentComments();
 
     if (scalar @lines > 0) {
-        print $q->start_table({-id => 'lastComments'});
+        print $q->start_table({-id => 'lastComments', -class => 'content'});
         print $q->Tr( $q->th(__ 'Time added'),
                       $q->th(__ 'Professor'),
                       $q->th(__ 'Comment') );
@@ -265,10 +267,13 @@ improve the situation.');
     print $q->h1({-class => 'specialHeading'}, __ 'Contact');
     print $q->p(__ 'Your comments and suggestions are welcome.');
     print $q->p('marjana.voronina@gmail.com');
-    print $q->p({class => 'contactMe'},'✎');
     printEndHtml();
-}
-elsif (getParam('action') eq 'search') {
+} elsif (getParam('action') eq 'faq') {
+    printAllHeaders();
+    print $q->h1({-class => 'specialHeading'}, __ 'FAQ');
+    print $q->p(__ 'Will be added soon.');
+    printEndHtml();
+} elsif (getParam('action') eq 'search') {
     printAllHeaders();
     printSearchPanel();
     if ($name eq '' || length($name) < 3) {
@@ -385,7 +390,7 @@ elsif (getParam('action') eq 'add') {
         print $q->p( __ 'No professors have been added yet.'); #
     } else { #
         printAddButton();
-        print $q->start_div({id => 'allProfsList'});
+        print $q->start_div({id => 'allProfsList', -class => 'content'});
         print $q->start_ul({id => 'allProfsUl'});
         foreach (@files){
             utf8::decode($_);
@@ -406,12 +411,13 @@ sub printNavbar {
     if ($action eq 'read') {
         $action .= "&name=$name";
     }
-    print $q->start_div({class=>'navbar'});
+    print $q->start_div({id=>'navbar'});
 
     my @links = (
-        {'?' => 'Main page'},
+        {'?' => 'Professors.ee'},
         {'?action=changes' => 'Recent comments'},
         {'?action=project' => 'About the project'},
+        {'?action=faq' => 'FAQ'},
         {'?action=contact' => 'Contact'},
         );
 
@@ -424,7 +430,7 @@ sub printNavbar {
     printNavbarUl('links', @links);
     printNavbarUl('lang', @lang);
 
-    print $q->end_div(); # .navbar
+    print $q->end_div(); # navbar
 }
 
 sub printNavbarUl {
@@ -446,7 +452,7 @@ sub printListItems {
 
 sub printHeader {
     print '<header>';
-    print $q->p({-class => 'centered', -id => 'slogan'}, $q->a({-href => '/'}, __ 'Find a perfectly suitable professor!'));
+    print $q->p({-class => 'centered', -id => 'slogan'},  __ 'Find a perfectly suitable professor!');
     print '</header>';
 }
 
@@ -457,7 +463,6 @@ sub printSearchPanel {
         -id       => 'searchForm',
         );
     print $q->p({-class => 'enterName'}, __ 'Enter professor\'s name:');
-    print $q->p('︾');
     print $q->textfield(
         -name     => 'name',
         -value    => $name,
@@ -474,7 +479,7 @@ sub printSearchPanel {
     print $q->br();
     print $q->submit(
         -value    => __ 'SEARCH',
-        -class    => 'button greenButton'
+        -class    => 'button'
         );
     print $q->end_form;
 }
@@ -537,7 +542,7 @@ sub printMeta {
 }
 
 sub printAllHeaders {
-    my $csp = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self';";
+    my $csp = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self';";
     print $q->header(
         -charset  => 'UTF-8',
         -cookie   => [$cookieDropDownUni, $cookieTextInputUni, $cookieLang],
@@ -553,7 +558,7 @@ sub printAllHeaders {
 }
 
 sub printAddForm {
-    print $q->h2({-class => 'specialHeading'}, __ 'Add a new professor');
+    print $q->h1({-class => 'specialHeading'}, __ 'Add a new professor');
     print $q->start_form(
         -id        => 'addProfForm',
         -method    => 'POST',
@@ -669,9 +674,9 @@ sub printCommentForm {
         -value     => $name,
         -override  => 1,
         );
-    print $q->p(__ 'University:');
+    print $q->label(__ 'University:');
     printListOfUniversities();
-    print $q->p(__ 'Course name:');
+    print $q->label(__ 'Course name:');
     print $q->textfield(
         -name=> 'course',
         -maxlength => 100,
@@ -679,7 +684,7 @@ sub printCommentForm {
         -value     => $clear ? '' : $course || '',
         -override  => 1,
         );
-    print $q->p(__ 'Comment:');
+    print $q->label(__ 'Comment:');
     print $q->textarea(
         -name=> 'comment',
         -rows      => 3,
@@ -689,7 +694,7 @@ sub printCommentForm {
         -value     => $clear ? '' : $comment || '',
         -override  => 1,
         );
-    print $q->p(__ 'General impression:');
+    print $q->label(__ 'General impression:');
     print $q->start_div({-id => 'impressionRadioButtons'});
     print $q->radio_group(
         -name      => 'generalImpression',
