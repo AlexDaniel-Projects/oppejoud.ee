@@ -279,7 +279,7 @@ improve the situation.');
     print $q->h2( __ 'Professors');
     print $q->h3(__ 'I do not want others to write things about me!');
     print $q->p(__ encode 'UTF-8', 'Why not? 😊');
-    print $q->p(__ 'Over 9999% of feedbacks on this website are positive. If you are a great professor (and I hope you are!), then there is nothing to worry about.');
+    print $q->p(__ 'Over 75% of feedbacks on this website are positive or neutral. If you are a great professor (and I hope you are!), then there is nothing to worry about.');
     print $q->p(__ 'Somebody will always be unhappy, but that\'s OK. Consider it as an opportunity to improve yourself, and as a result to have an even better impact on our next generation of specialists!');
     print $q->h3(__ 'My university already has a system for feedbacks, I like it more than your website');
     print $q->p(__ 'Let\'s be honest here: how much do you care about feedbacks left in a non-public system of your university (do you even read them?), and how much do you care about things written on this website?');
