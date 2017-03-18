@@ -265,8 +265,10 @@ improve the situation.');
 } elsif (getParam('action') eq 'contact') {
     printAllHeaders();
     print $q->h1({-class => 'specialHeading'}, __ 'Contact');
+    print $q->start_div({-class => 'content', -id => 'contact'});
     print $q->p(__ 'Your comments and suggestions are welcome.');
     print $q->p('marjana.voronina@gmail.com');
+    print $q->end_div();
     printEndHtml();
 } elsif (getParam('action') eq 'faq') {
     printAllHeaders();
