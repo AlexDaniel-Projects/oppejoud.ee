@@ -232,7 +232,7 @@ Unfortunately, studying programmes are not perfect and do not account for studen
     print $q->p(__ 'There were times when I wished professors demanded more from me (when the course was interesting and useful), other
 times I wished the requirements were lower. Harsh reality is that courses that are not compulsory for my profession took most of the time,
 leaving absolutely required courses in the background.');
-    print $q->p(__ encode 'UTF-8', 'Today students in most universities are allowed not only to create their own schedules, but also to choose professors.
+    print $q->p(encode 'UTF-8', __ 'Today students in most universities are allowed not only to create their own schedules, but also to choose professors.
 This led me to a thought that it should be possible to “meet” your professor before you actually start attending the lectures.');
     print $q->p(__ 'Right now there are not enough feedbacks about Estonian professors on the Internet. I am hoping this project will
 improve the situation.');
@@ -276,11 +276,11 @@ improve the situation.');
     print $q->start_div({-class => 'content', -id => 'faq'});
     print $q->h2(__ 'Students');
     print $q->h3(__ 'My professor is missing');
-    print $q->p(__ encode 'UTF-8', 'You can add a new name yourself. Just type the name into the search form and press ｢SEARCH｣. You will see a button that will lead you to a page where you will need to fill the required information (you only need first and last names).');
+    print $q->p(encode 'UTF-8', __ 'You can add a new name yourself. Just type the name into the search form and press ｢SEARCH｣. You will see a button that will lead you to a page where you will need to fill the required information (you only need first and last names).');
     print $q->p(__ 'If you have a long list of names, I\'d be happy if you contributed it (either in an automated way using the form mentioned above, or by simply', $q->a({-href => '?action=contact'}, __ 'sending the list to me') . ').');
-    print $q->h2( __ 'Professors');
+    print $q->h2(__ 'Professors');
     print $q->h3(__ 'I do not want others to write things about me!');
-    print $q->p(__ encode 'UTF-8', 'Why not? 😊');
+    print $q->p(encode 'UTF-8', __ 'Why not? 😊');
     print $q->p(__ 'Over 75% of feedbacks on this website are positive or neutral. If you are a great professor (and I hope you are!), then there is nothing to worry about.');
     print $q->p(__ 'Somebody will always be unhappy, but that\'s OK. Consider it as an opportunity to improve yourself, and as a result to have an even better impact on our next generation of specialists!');
     print $q->h3(__ 'My university already has a system for feedbacks, I like it more than your website');
@@ -296,9 +296,9 @@ improve the situation.');
     print $q->p(__ 'The problem is that I have received enough emails from people claiming that they are not professors, but at the same time I can clearly see them in the study information system of their university. Some of them even had active courses that they were teaching at the time of writing.');
     print $q->p(__ 'Here is a list of things to note if you want to apply for removal:');
     print $q->start_ol();
-    print $q->li('Your name should not be in a study system of any university. If you want all information about your teaching history removed, start from your university, not this website.');
-    print $q->li('If there are any existing comments, but you are not a professor anymore, make sure to let some time to pass (a few years). I am not interested in removing names from this website just to add them back in 6 months because you decided to take a break (or changed your mind, or whatever).');
-    print $q->li('At any point in time anybody can add your name back. I\'ll do my best to make sure this is not done accidentally, but I am never going to prevent somebody from writing a comment.');
+    print $q->li(__ 'Your name should not be in a study system of any university. If you want all information about your teaching history removed, start from your university, not this website.');
+    print $q->li(__ 'If there are any existing comments, but you are not a professor anymore, make sure to let some time to pass (a few years). I am not interested in removing names from this website just to add them back in 6 months because you decided to take a break (or changed your mind, or whatever).');
+    print $q->li(__ 'At any point in time anybody can add your name back. I\'ll do my best to make sure this is not done accidentally, but I am never going to prevent somebody from writing a comment.');
     print $q->end_ol();
     print $q->p(__ 'The process is very simple: just write me an email. I will answer within 3 weeks.');
     print $q->end_div();
@@ -445,10 +445,10 @@ sub printNavbar {
 
     my @links = (
         {'?' => 'Professors.ee'},
-        {'?action=changes' => 'Recent comments'},
-        {'?action=project' => 'About the project'},
-        {'?action=faq' => 'FAQ'},
-        {'?action=contact' => 'Contact'},
+        {'?action=changes' => __ 'Recent comments'},
+        {'?action=project' => __ 'About the project'},
+        {'?action=faq' => __ 'FAQ'},
+        {'?action=contact' => __ 'Contact'},
         );
 
     my @lang = (
@@ -475,7 +475,7 @@ sub printListItems {
     my (@array) = @_;
     for my $href ( @array ) {
         for my $key ( keys %$href ) {
-            print li(a({href => $key}, __ $href->{$key}));
+            print li(a({href => $key}, $href->{$key}));
         }
     }
 }
