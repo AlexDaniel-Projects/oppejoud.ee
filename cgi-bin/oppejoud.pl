@@ -232,7 +232,7 @@ Unfortunately, studying programmes are not perfect and do not account for studen
     print $q->p(__ 'There were times when I wished professors demanded more from me (when the course was interesting and useful), other
 times I wished the requirements were lower. Harsh reality is that courses that are not compulsory for my profession took most of the time,
 leaving absolutely required courses in the background.');
-    print $q->p(encode 'UTF-8', __ 'Today students in most universities are allowed not only to create their own schedules, but also to choose professors.
+    print $q->p(__ encode 'UTF-8', N__ 'Today students in most universities are allowed not only to create their own schedules, but also to choose professors.
 This led me to a thought that it should be possible to “meet” your professor before you actually start attending the lectures.');
     print $q->p(__ 'Right now there are not enough feedbacks about Estonian professors on the Internet. I am hoping this project will
 improve the situation.');
@@ -276,11 +276,11 @@ improve the situation.');
     print $q->start_div({-class => 'content', -id => 'faq'});
     print $q->h2(__ 'Students');
     print $q->h3(__ 'My professor is missing');
-    print $q->p(encode 'UTF-8', __ 'You can add a new name yourself. Just type the name into the search form and press ｢SEARCH｣. You will see a button that will lead you to a page where you will need to fill the required information (you only need first and last names).');
+    print $q->p(__ encode 'UTF-8', N__ 'You can add a new name yourself. Just type the name into the search form and press ｢SEARCH｣. You will see a button that will lead you to a page where you will need to fill the required information (you only need first and last names).');
     print $q->p(__ 'If you have a long list of names, I\'d be happy if you contributed it (either in an automated way using the form mentioned above, or by simply', $q->a({-href => '?action=contact'}, __ 'sending the list to me') . ').');
     print $q->h2(__ 'Professors');
     print $q->h3(__ 'I do not want others to write things about me!');
-    print $q->p(encode 'UTF-8', __ 'Why not? 😊');
+    print $q->p(__ encode 'UTF-8', N__ 'Why not? 😊');
     print $q->p(__ 'Over 75% of feedbacks on this website are positive or neutral. If you are a great professor (and I hope you are!), then there is nothing to worry about.');
     print $q->p(__ 'Somebody will always be unhappy, but that\'s OK. Consider it as an opportunity to improve yourself, and as a result to have an even better impact on our next generation of specialists!');
     print $q->h3(__ 'My university already has a system for feedbacks, I like it more than your website');
