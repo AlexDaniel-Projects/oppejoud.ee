@@ -453,6 +453,14 @@ label {
     margin-top: 40px;
 }
 
+#contact {
+    text-align: center;
+}
+
+#why {
+    margin-bottom: 100px;
+}
+
 /* Small screens */
 
 @media only screen and (max-width:1099px){
@@ -624,12 +632,10 @@ label {
     }
 
     #why {
-        margin-bottom: 50px;
         margin-left: 5px;
         margin-right: 5px;
     }
 }
-
 
 /* Custom awesomplete CSS */
 
