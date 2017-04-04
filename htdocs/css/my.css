@@ -219,8 +219,11 @@ textarea:focus {
 .addCommentForm input[type='text'] {
     width: 90%;
     height: 50px;
-    font-size: 22px;
     box-sizing: border-box;
+}
+
+.addCommentForm input[type="text"], .addCommentForm textarea {
+    font-size: 18px;
 }
 
 #searchForm {
@@ -634,6 +637,10 @@ label {
     #why {
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .addCommentForm input[type="text"], .addCommentForm textarea {
+        font-size: 16px;
     }
 }
 
