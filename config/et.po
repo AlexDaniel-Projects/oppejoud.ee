@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: Marjana Voronina <marjana.voronina@gmail.com>\n"
-"POT-Creation-Date: 2017-03-19 20:36+0100\n"
+"POT-Creation-Date: 2017-04-02 17:20+0200\n"
 "PO-Revision-Date: 2017-03-19 20:36+0100\n"
 "Last-Translator: Marjana Voronina <marjana.voronina@gmail.com>\n"
 "Language-Team: \n"
@@ -160,15 +160,15 @@ msgstr "Küsimused ja ettepanekud on oodatud."
 
 #: ../cgi-bin/oppejoud.pl:275 ../cgi-bin/oppejoud.pl:450
 msgid "FAQ"
-msgstr ""
+msgstr "KKK"
 
 #: ../cgi-bin/oppejoud.pl:277
 msgid "Students"
-msgstr ""
+msgstr "Tudengid"
 
 #: ../cgi-bin/oppejoud.pl:278
 msgid "My professor is missing"
-msgstr ""
+msgstr "Minu õppejõud puudub nimekirjast"
 
 #: ../cgi-bin/oppejoud.pl:279
 msgid ""
@@ -177,16 +177,21 @@ msgid ""
 "will need to fill the required information (you only need first and last "
 "names)."
 msgstr ""
+"Sina saad õppejõude ise lisada. Sisesta õppejõu nimi otsingu välja ja vajuta "
+"｢OTSI｣. Siis näed nuppu, mis viib sind lehele, kus täidad vajalikku "
+"informatsiooni (on vaja sisestada vaid õppejõu ees- ja perekonnanime)."
 
 #: ../cgi-bin/oppejoud.pl:280
 msgid ""
 "If you have a long list of names, I'd be happy if you contributed it (either "
 "in an automated way using the form mentioned above, or by simply"
 msgstr ""
+"Kui sul on pikk õppejõudude nimekiri, võid selle lisada ülalpool mainitud "
+"vormi kaudu automaatselt (või lihtsalt"
 
 #: ../cgi-bin/oppejoud.pl:280
 msgid "sending the list to me"
-msgstr ""
+msgstr "saata mulle"
 
 #: ../cgi-bin/oppejoud.pl:281
 msgid "Professors"
@@ -194,18 +199,22 @@ msgstr "Õppejõud"
 
 #: ../cgi-bin/oppejoud.pl:282
 msgid "I do not want others to write things about me!"
-msgstr ""
+msgstr "Ma ei taha, et keegi kirjutaks minust!"
 
 #: ../cgi-bin/oppejoud.pl:283
 msgid "Why not? 😊"
-msgstr ""
+msgstr "Miks mitte? 😊"
 
 #: ../cgi-bin/oppejoud.pl:284
-#, perl-format
+# perl-brace-format
 msgid ""
-"Over 75% of feedbacks on this website are positive or neutral. If you are a "
-"great professor (and I hope you are!), then there is nothing to worry about."
+"Over {percent}% of feedbacks on this website are positive or neutral. If you "
+"are a great professor (and I hope you are!), then there is nothing to worry "
+"about."
 msgstr ""
+"Üle {percent}% kommentaaridest sellel veebilehel on positiivsed või "
+"neutraalsed. Kui oled hea õppejõud (ma loodan, et oled!), siis ei ole "
+"millestki muretseda."
 
 #: ../cgi-bin/oppejoud.pl:285
 msgid ""
@@ -213,12 +222,16 @@ msgid ""
 "opportunity to improve yourself, and as a result to have an even better "
 "impact on our next generation of specialists!"
 msgstr ""
+"Keegi on alati õnnetu ja see on OK. Kaalutle seda nagu võimalust ennast "
+"paremaks teha!"
 
 #: ../cgi-bin/oppejoud.pl:286
 msgid ""
 "My university already has a system for feedbacks, I like it more than your "
 "website"
 msgstr ""
+"Minu ülikoolis on juba olemas süsteem, kus saab kommentaare jätta ja see "
+"meeldib mulle rohkem kui see portaal"
 
 #: ../cgi-bin/oppejoud.pl:287
 msgid ""
@@ -226,42 +239,55 @@ msgid ""
 "public system of your university (do you even read them?), and how much do "
 "you care about things written on this website?"
 msgstr ""
+"Ütle ausalt, kui palju sa hoolid suletud süsteemis jäetud kommentaaridest? "
+"Kas sa üldse loed neid? Ja palju sa hoolid sellest, mis on sellel veebilehel "
+"kirjutatud?"
 
 #: ../cgi-bin/oppejoud.pl:288
 msgid ""
 "If your university was publishing all of the feedbacks, your name wouldn't "
 "be on this website."
 msgstr ""
+"Kui sinu ülikool oleks kõiki kommentaare avalikeks teinud, seda veebilehte "
+"ei eksisteeriks."
 
 #: ../cgi-bin/oppejoud.pl:289
 msgid "Someone wrote lies about me!"
-msgstr ""
+msgstr "Keegi kirjutas laimu minu kohta!"
 
 #: ../cgi-bin/oppejoud.pl:290
 msgid ""
 "Feel free to leave a comment yourself to explain the situation. There have "
 "been cases like this."
 msgstr ""
+"Jäta ise kommentaar ja seleta olukord lahti. Selliseid olukordi on juhtunud."
 
 #: ../cgi-bin/oppejoud.pl:291
 msgid "I DID NOT GIVE YOU A PERMISSION TO LIST MY NAME!"
-msgstr ""
+msgstr "ILMA MINU NÕUSOLEKUTA EI TOHI TE MINU NIME KASUTADA!"
 
 #: ../cgi-bin/oppejoud.pl:292
 msgid ""
 "Here is the deal: find the law that prohibits this, and I will delete your "
 "name immediately. You can start from"
 msgstr ""
+"Kui saate leida seadust, mis keelab seda, kustutan Teie nime nimekirjast "
+"kohe ära. Võite alustada"
+
+#: ../cgi-bin/oppejoud.pl:292
+msgid "here"
+msgstr "siit"
 
 #: ../cgi-bin/oppejoud.pl:293
 msgid ""
+
 "To motivate your research, here is a counter of people who succeeded in "
 "this: 0"
-msgstr ""
+msgstr "Loendur, mis näitab, mitmel inimesel see õnnestus: 0"
 
 #: ../cgi-bin/oppejoud.pl:294
 msgid "But I am not a professor!"
-msgstr "Lisa õppejõud!"
+msgstr "Ma ei ole õppejõud!"
 
 #: ../cgi-bin/oppejoud.pl:295
 msgid ""
@@ -270,6 +296,9 @@ msgid ""
 "point to pollute the list with names that are not associated with this "
 "purpose."
 msgstr ""
+"Kui sa ei ole õppejõud ja pole kunagi olnud, siis sellest piisab, et nime "
+"nimekirjast eemaldada. See veebileht on ikkagi õppejõududest ja pole mõtet "
+"seda saastada nimedega, mis ei ole teemaga seotud."
 
 #: ../cgi-bin/oppejoud.pl:296
 msgid ""
@@ -278,17 +307,22 @@ msgid ""
 "study information system of their university. Some of them even had active "
 "courses that they were teaching at the time of writing."
 msgstr ""
+"Probleemiks on see, et olen saanud palju kirju inimestest, kes väitavad, et "
+"nad ei ole õppejõud, kuid reaalsuses saan ülikoolide infosüsteemidest nende "
+"nimesid leida. Mõned nendest isegi viivad läbi aktiivseid kursuseid."
 
 #: ../cgi-bin/oppejoud.pl:297
 msgid "Here is a list of things to note if you want to apply for removal:"
-msgstr ""
+msgstr "Kui sa tahad, et sinu nimi oleks nimekirjast eemaldatud:"
 
 #: ../cgi-bin/oppejoud.pl:299
 msgid ""
 "Your name should not be in a study system of any university. If you want all "
 "information about your teaching history removed, start from your university, "
 "not this website."
-msgstr ""
+msgstr "Su nimi ei tohiks olla ülikooli infosüsteemis. Kui tahad oma "
+"õppejõu tegevusega seotud informatsiooni internetist eemaldada, siis "
+"alusta oma ülikooli infosüsteemist."
 
 #: ../cgi-bin/oppejoud.pl:300
 msgid ""
@@ -297,19 +331,23 @@ msgid ""
 "removing names from this website just to add them back in 6 months because "
 "you decided to take a break (or changed your mind, or whatever)."
 msgstr ""
+"Kui sinu kohta on jäetud kommentaarid ja sa ei ole enam õppejõud, lase ajal "
+"mööduda (mitut aastat). Ma ei taha infot kustutada ja poole aasta pärast "
+"uuesti lisada selle pärast, et sina otsustasid teha pausi või mõtlesid ümber."
 
 #: ../cgi-bin/oppejoud.pl:301
 msgid ""
 "At any point in time anybody can add your name back. I'll do my best to make "
 "sure this is not done accidentally, but I am never going to prevent somebody "
 "from writing a comment."
-msgstr ""
+msgstr "Igal hetkel saab keegi su nime tagasi lisada."
 
 #: ../cgi-bin/oppejoud.pl:303
 msgid ""
 "The process is very simple: just write me an email. I will answer within 3 "
 "weeks."
 msgstr ""
+"Kui need tingimused on täidetud, kirjuta mulle. Vastan sulle 3 nädala jooksul."
 
 #: ../cgi-bin/oppejoud.pl:310
 #, perl-brace-format

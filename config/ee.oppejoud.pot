@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Marjana Voronina <marjana.voronina@gmail.com>\n"
-"POT-Creation-Date: 2017-03-19 20:36+0100\n"
+"POT-Creation-Date: 2017-04-02 17:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -187,10 +187,11 @@ msgid "Why not? 😊"
 msgstr ""
 
 #: ../cgi-bin/oppejoud.pl:284
-#, perl-format
+#, perl-format, perl-brace-format
 msgid ""
-"Over 75% of feedbacks on this website are positive or neutral. If you are a "
-"great professor (and I hope you are!), then there is nothing to worry about."
+"Over {percent}% of feedbacks on this website are positive or neutral. If you "
+"are a great professor (and I hope you are!), then there is nothing to worry "
+"about."
 msgstr ""
 
 #: ../cgi-bin/oppejoud.pl:285
@@ -237,6 +238,10 @@ msgstr ""
 msgid ""
 "Here is the deal: find the law that prohibits this, and I will delete your "
 "name immediately. You can start from"
+msgstr ""
+
+#: ../cgi-bin/oppejoud.pl:292
+msgid "here"
 msgstr ""
 
 #: ../cgi-bin/oppejoud.pl:293
