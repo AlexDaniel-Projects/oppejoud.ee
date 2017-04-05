@@ -63,13 +63,13 @@ body {
 }
 
 #links li:first-child a {
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
 }
 
 #links li:first-child a:hover {
-    background-color: #FF4107;
-    color: white;
+    background-color: #FF4107 !important;
+    color: white !important;
     transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
 }
 
@@ -464,6 +464,41 @@ label {
     margin-bottom: 100px;
 }
 
+.active {
+    color:#FFF !important;
+    position:relative;
+}
+
+.active:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: 3px;
+}
+
+.active:hover {
+    color: #000 !important;
+}
+
+.active:hover:after {
+    border-top:3px solid #000;
+}
+
+#links li:first-child a.active:after {
+    border-top:3px solid #000 !important;
+}
+
+#links li:first-child a.active:hover:after {
+    border-top:3px solid #fff !important;
+}
+
 /* Small screens */
 
 @media only screen and (max-width:1099px){
@@ -523,7 +558,7 @@ label {
 
     #lang li a {
         padding-left: 15px;
-        padding-right: 25px;
+        padding-right: 15px;
     }
 
     #slogan {
@@ -641,6 +676,28 @@ label {
 
     .addCommentForm input[type="text"], .addCommentForm textarea {
         font-size: 16px;
+    }
+
+    .active:hover {
+        color: #fff !important;
+    }
+
+    .active:hover:after {
+        border-top:3px solid #fff !important;
+    }
+
+    #links li:first-child a {
+        background-color: #20295B !important;
+        color: #fff !important;
+    }
+
+    #links li:first-child a:hover {
+        background-color: #20295B !important;
+        color: white !important;
+    }
+
+    #links li:first-child a.active:after {
+        border-top:3px solid #fff !important;
     }
 }
 

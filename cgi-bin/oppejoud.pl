@@ -47,6 +47,7 @@ my $cookieLang = '';
 my $nameRegex = '^[\p{L} -]+$';
 my $defaultUni = ''; #TODO
 my $coder = JSON::XS->new->pretty;
+my $action = getParam('action');
 
 my $mainFolder = '../data';
 my $tmpFolder = "$mainFolder/tmp";
@@ -437,47 +438,33 @@ elsif (getParam('action') eq 'add') {
 }
 
 sub printNavbar {
-    my $action = getParam('action');
     if ($action eq 'read') {
         $action .= "&name=$name";
     }
     print $q->start_div({id=>'navbar'});
 
-    my @links = (
-        {'?' => 'Professors.ee'},
-        {'?action=changes' => __ 'Recent comments'},
-        {'?action=project' => __ 'About the project'},
-        {'?action=faq' => __ 'FAQ'},
-        {'?action=contact' => __ 'Contact'},
-        );
-
-    my @lang = (
-        {"?action=$action&lang=et" => 'EST'},
-        {"?action=$action&lang=ru" => 'RUS'},
-        {"?action=$action&lang=en" => 'ENG'},
-        );
-
-    printNavbarUl('links', @links);
-    printNavbarUl('lang', @lang);
+    printLinks();
+    printLanguages();
 
     print $q->end_div(); # navbar
 }
 
-sub printNavbarUl {
-    my ($id, @ulName) = @_;
-
-    print start_ul({-id => $id});
-    printListItems(@ulName);
+sub printLinks {
+    print start_ul({-id => 'links'});
+    print li(a({href => '?', class => ($action eq undef or $action eq '') ? 'active' : 'inactive'}, 'Professors.ee'));
+    print li(a({href => '?action=changes', class => $action eq 'changes' ? 'active' : 'inactive'},  __ 'Recent comments'));
+    print li(a({href => '?action=project', class => $action eq 'project' ? 'active' : 'inactive'},  __ 'About the project'));
+    print li(a({href => '?action=faq', class => $action eq 'faq' ? 'active' : 'inactive'},  __ 'FAQ'));
+    print li(a({href => '?action=contact', class => $action eq 'contact' ? 'active' : 'inactive'},  __ 'Contact'));
     print end_ul();
 }
 
-sub printListItems {
-    my (@array) = @_;
-    for my $href ( @array ) {
-        for my $key ( keys %$href ) {
-            print li(a({href => $key}, $href->{$key}));
-        }
-    }
+sub printLanguages {
+    print start_ul({-id => 'lang'});
+    print li(a({href => "?action=$action&lang=et", class => $ENV{LANGUAGE} eq 'et' ? 'active' : 'inactive'}, 'EST'));
+    print li(a({href => "?action=$action&lang=ru", class => $ENV{LANGUAGE} eq 'ru' ? 'active' : 'inactive'}, 'RUS'));
+    print li(a({href => "?action=$action&lang=en", class => $ENV{LANGUAGE} eq 'en' ? 'active' : 'inactive'}, 'ENG'));
+    print end_ul();
 }
 
 sub printHeader {
