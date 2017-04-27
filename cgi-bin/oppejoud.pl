@@ -416,7 +416,7 @@ elsif (getParam('action') eq 'add') {
                 writeStringToFile($allProfsFile, $teachersList);
                 unlockOperation();
                 print redirect(-url => "?action=read&name=$fullName");
-                return;
+                exit;
             }
         }
     }
