@@ -112,15 +112,15 @@ if (getParam('action') eq 'write') {
     my $time = $dateTime->time;
 
     $uni ||= $userUni;
-    if ($name eq '' or $name eq undef) {
+    if (not defined $name or $name eq '') {
         commentError(__ 'Professor\'s name can\'t be blank.');
-    } elsif ($uni eq '' or $uni eq undef) {
+    } elsif (not defined $uni or $uni eq '') {
         commentError(__ 'Please choose or enter a university.');
     } elsif (length($uni) > 100) {
         commentError(__x 'University name can\'t be longer than {count} symbols.', count => 100);
-    } elsif ($course eq '' or $course eq undef) {
+    } elsif (not defined $course or $course eq '') {
         commentError(__ 'Please enter a course name.');
-    } elsif ($comment eq '' or $comment eq undef) {
+    } elsif (not defined $comment or $comment eq '') {
         commentError(__ 'Please enter a comment.');
     } elsif ($name !~ /$nameRegex/) {
         commentError(__ 'Only letters, hyphens and spaces are allowed.');
@@ -468,7 +468,7 @@ sub printNavbar {
 
 sub printLinks {
     print start_ul({-id => 'links'});
-    print li(a({href => '?', class => ($action eq undef or $action eq '') ? 'active' : 'inactive'}, 'Professors.ee'));
+    print li(a({href => '?', class => (not defined $action or $action eq '') ? 'active' : 'inactive'}, 'Professors.ee'));
     print li(a({href => '?action=changes', class => $action eq 'changes' ? 'active' : 'inactive'},  __ 'Recent comments'));
     print li(a({href => '?action=project', class => $action eq 'project' ? 'active' : 'inactive'},  __ 'About the project'));
     print li(a({href => '?action=faq', class => $action eq 'faq' ? 'active' : 'inactive'},  __ 'FAQ'));
