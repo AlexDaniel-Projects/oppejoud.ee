@@ -124,8 +124,8 @@ if (getParam('action') eq 'write') {
         commentError(__ 'Please enter a comment.');
     } elsif ($name !~ /$nameRegex/) {
         commentError(__ 'Only letters, hyphens and spaces are allowed.');
-    } elsif (length($comment) > 1000) {
-        commentError(__x 'Comment can\'t be longer than {count} symbols.', count => 1000);
+    } elsif (length($comment) > 2000) {
+        commentError(__x 'Comment can\'t be longer than {count} symbols.', count => 2000);
     } elsif (length($course) > 100) {
         commentError(__x 'Course name can\'t be longer than {count} symbols.', count => 100);
     } elsif ($generalImpression ne 'bad' and $generalImpression ne 'neutral' and $generalImpression ne 'good') {
@@ -723,7 +723,7 @@ sub printCommentForm {
         -name=> 'comment',
         -rows      => 3,
         -class     => 'commentArea',
-        -maxlength => 1000,
+        -maxlength => 2000,
         -required  => 'required',
         -value     => $clear ? '' : $comment || '',
         -override  => 1,
