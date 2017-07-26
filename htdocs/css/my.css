@@ -638,15 +638,17 @@ label {
         margin-bottom: 0;
     }
 
+    #lastComments {
+        table-layout: fixed;
+        width: 100%;
+    }
+
     #lastComments table,  #lastComments thead,  #lastComments tbody,  #lastComments td,  #lastComments tr {
 	width: 100% !important;
 	display: block;
 	text-align: center !important;
     }
 
-    #lastComments th {
-	display: none;
-    }
 
     #lastComments tr {
 	border-bottom: 1px solid #b2b2b2;
@@ -655,6 +657,16 @@ label {
     #lastComments td, th {
         padding: 5px 0px;
         border: none;
+        white-space: wrap;
+        word-wrap: break-word;
+    }
+
+    #lastComments th {
+	display: none;
+    }
+
+    .dateTime {
+        width: 100%;
     }
 
     #impressionRadioButtons {
