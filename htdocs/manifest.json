@@ -1,0 +1,9 @@
+{
+    "name": "Professors.ee",
+    "short_name": "Professors.ee",
+    "start_url": "/",
+    "display": "fullscreen",
+    "background_color": "#f1f1f1",
+    "description": "A website where Estonian students can give feedback to their professors anonymously.",
+    "manifest_version": 2
+}

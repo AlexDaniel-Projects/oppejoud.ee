@@ -565,6 +565,9 @@ sub printMeta {
                    -type    => 'application/rss+xml',
                    -title   => 'oppejoud.ee',
                   }),
+             Link({-rel     => 'manifest',
+                   -href    => '/manifest.json',
+                  }),
         ],
         -encoding => 'utf-8',
         -title    => $name || __ 'Find a perfectly suitable professor!',
@@ -576,7 +579,7 @@ sub printMeta {
 }
 
 sub printAllHeaders {
-    my $csp = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self';";
+    my $csp = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self';";
     print $q->header(
         -charset  => 'UTF-8',
         -cookie   => [$cookieDropDownUni, $cookieTextInputUni, $cookieLang],
