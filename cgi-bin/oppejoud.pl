@@ -467,8 +467,9 @@ sub printNavbar {
 }
 
 sub printLinks {
+    my $domain = ucfirst($ENV{SERVER_NAME});
     print start_ul({-id => 'links'});
-    print li(a({href => '?', class => (not defined $action or $action eq '') ? 'active' : 'inactive'}, 'Professors.ee'));
+    print li(a({href => '?', class => (not defined $action or $action eq '') ? 'active' : 'inactive'}, $domain));
     print li(a({href => '?action=changes', class => $action eq 'changes' ? 'active' : 'inactive'},  __ 'Recent comments'));
     print li(a({href => '?action=project', class => $action eq 'project' ? 'active' : 'inactive'},  __ 'About the project'));
     print li(a({href => '?action=faq', class => $action eq 'faq' ? 'active' : 'inactive'},  __ 'FAQ'));
