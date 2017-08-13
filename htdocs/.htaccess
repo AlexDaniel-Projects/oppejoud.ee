@@ -4,6 +4,7 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_URI} !^/robots.txt$
 RewriteCond %{REQUEST_URI} !^/manifest.json$
+RewriteCond %{REQUEST_URI} !^/service-worker.js$
 
 # If there's no query string, change the page name part into a query.
 RewriteCond %{QUERY_STRING} ^$

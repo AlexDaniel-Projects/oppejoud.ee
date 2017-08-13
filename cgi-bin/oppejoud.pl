@@ -584,7 +584,7 @@ sub printMeta {
 }
 
 sub printAllHeaders {
-    my $csp = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self';";
+    my $csp = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self'; worker-src 'self';";
     print $q->header(
         -charset  => 'UTF-8',
         -cookie   => [$cookieDropDownUni, $cookieTextInputUni, $cookieLang],
