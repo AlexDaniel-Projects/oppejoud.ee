@@ -149,7 +149,7 @@ if (getParam('action') eq 'write') {
 
         my ($ok, $storedIn) = readFile($teacherFile);
         if (not $ok) {
-            commentError('Cannot read database. Please write to marjana.voronina@gmail.com'); # TODO
+            commentError('Cannot read database. Please write to alex.jakimenko+oppejoud@gmail.com'); # TODO
         }
         if ($storedIn) {
             $storedIn = $coder->decode($storedIn);
@@ -287,7 +287,7 @@ improve the situation.');
     print $q->h1({-class => 'specialHeading'}, __ 'Contact');
     print $q->start_div({-class => 'content', -id => 'contact'});
     print $q->p(__ 'Your comments and suggestions are welcome.');
-    print $q->p('marjana.voronina@gmail.com');
+    print $q->p('alex.jakimenko+oppejoud@gmail.com');
     print $q->end_div();
     printEndHtml();
 } elsif (getParam('action') eq 'faq') {
@@ -535,7 +535,7 @@ sub printListOfUniversities {
 
     my ($ok, $storedIn) = readFile($allUnisFile);
     if (not $ok) {
-        commentError('Cannot read database. Please write to marjana.voronina@gmail.com'); # TODO
+        commentError('Cannot read database. Please write to alex.jakimenko+oppejoud@gmail.com'); # TODO
     }
     if ($storedIn) {
         $storedIn = $coder->decode($storedIn);
