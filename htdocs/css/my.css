@@ -743,3 +743,17 @@ div.awesomplete mark {
 div.awesomplete li[aria-selected="true"] mark {
     background: hsl(231, 48%, 24%) !important;
 }
+
+.comment.response {
+    background-color: hsl(136, 100%, 89%);
+}
+
+.comment.suspicious {
+    background-color: hsl(56, 100%, 90%);
+}
+
+.response-text, .suspicious-text {
+    font-weight: bold;
+    font-style: oblique;
+    padding: 0 3rem;
+}

@@ -669,11 +669,13 @@ sub printTeacherData {
             $emoticon = '😐';
         }
 
-        print $q->div({-class=>"shadowed blackOnWhite comment"},
+        print $q->div({-class=>("shadowed blackOnWhite comment" . ($commentData->{suspicious} ? ' suspicious' : '') . ($commentData->{response} ? ' response' : ''))},
                       $q->start_table({-class => "uniAndCourse"}),
                       $q->Tr ($q->td(__('University:')), $q->td({class=>'university'},$commentData->{university})),
                       $q->Tr ($q->td(__('Course:')), $q->td({class => 'course'},$commentData->{course})),
                       $q->end_table(),
+                      ($commentData->{suspicious} ? $q->p({-class => 'centered suspicious-text'}, __ "This comment was tagged as “suspicious”. Possible reasons are: someone writing multiple angry comments at once; a professor writing comments about themselves, etc.") : ''),
+                      ($commentData->{response}   ? $q->p({-class => 'centered response-text'}, __ "This comment was tagged as a response by the professor.") : ''),
                       $q->p({-class   => 'centered commentText'}, "$commentData->{comment}"),
                       $q->div({-class => 'emoticon'}, "$emoticon"),
                       $q->p({-class   => 'centered date'}, "<time datetime=\"$commentData->{date} $commentData->{time}\">$commentData->{date} $commentData->{time}</time>"),
