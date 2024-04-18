@@ -66,7 +66,7 @@ my $defaultUni = ''; #TODO
 my $coder = JSON::XS->new->pretty;
 my $action = getParam('action');
 
-my $mainFolder = '../data';
+my $mainFolder = '/srv/data';
 my $tmpFolder = "$mainFolder/tmp";
 my $lock = "$mainFolder/lockFolder";
 my $logFolder = "$mainFolder/log";
