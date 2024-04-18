@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  backend:
+    image: postmodern.alexdaniel.org/oppejoud-backend:latest
+    build:
+      context: .
+    volumes:
+      - /home/oppejoud/data/oppejoud/data:/srv/data
+      - /home/oppejoud/data/oppejoud/logs:/srv/logs
+    networks:
+      - caddy
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 30s
+        order: start-first
+
+      labels:
+        caddy: oppejoud.ee, www.oppejoud.ee, professors.ee, www.professors.ee
+        caddy.tls: alex.jakimenko+caddy@gmail.com
+        caddy.reverse_proxy: "{{upstreams 80}}"
+
+networks:
+  caddy:
+    external: true
