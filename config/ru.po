@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: Marjana Voronina <marjana.voronina@gmail.com>\n"
-"POT-Creation-Date: 2017-04-02 17:20+0200\n"
+"POT-Creation-Date: 2022-05-05 19:04+0200\n"
 "PO-Revision-Date: 2017-03-19 20:36+0100\n"
 "Last-Translator: Marjana Voronina <marjana.voronina@gmail.com>\n"
 "Language-Team: \n"
@@ -16,67 +16,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../cgi-bin/oppejoud.pl:98
+#: ../cgi-bin/oppejoud.pl:116
 msgid "Professor's name can't be blank."
 msgstr "Имя преподавателя не может быть пустым."
 
-#: ../cgi-bin/oppejoud.pl:100
+#: ../cgi-bin/oppejoud.pl:118
 msgid "Please choose or enter a university."
 msgstr "Выберите университет или введите название сами."
 
-#: ../cgi-bin/oppejoud.pl:102
+#: ../cgi-bin/oppejoud.pl:120
 #, perl-brace-format
 msgid "University name can't be longer than {count} symbols."
 msgstr "Название предмета не может быть больше {count} символов."
 
-#: ../cgi-bin/oppejoud.pl:104
+#: ../cgi-bin/oppejoud.pl:122
 msgid "Please enter a course name."
 msgstr "Введите название курса."
 
-#: ../cgi-bin/oppejoud.pl:106
+#: ../cgi-bin/oppejoud.pl:124
 msgid "Please enter a comment."
 msgstr "Введите комментарий"
 
-#: ../cgi-bin/oppejoud.pl:108 ../cgi-bin/oppejoud.pl:314
-#: ../cgi-bin/oppejoud.pl:367
+#: ../cgi-bin/oppejoud.pl:126
+msgid "Spam is not allowed."
+msgstr ""
+
+#: ../cgi-bin/oppejoud.pl:128 ../cgi-bin/oppejoud.pl:321
+#: ../cgi-bin/oppejoud.pl:374
 msgid "Only letters, hyphens and spaces are allowed."
 msgstr "Разрешены только буквы, дефис и пробелы."
 
-#: ../cgi-bin/oppejoud.pl:110
+#: ../cgi-bin/oppejoud.pl:130
 #, perl-brace-format
 msgid "Comment can't be longer than {count} symbols."
 msgstr "Комментарий не может быть больше {count} символов."
 
-#: ../cgi-bin/oppejoud.pl:112
+#: ../cgi-bin/oppejoud.pl:132
 #, perl-brace-format
 msgid "Course name can't be longer than {count} symbols."
 msgstr "Название предмета не может быть больше {count} символов."
 
-#: ../cgi-bin/oppejoud.pl:114
+#: ../cgi-bin/oppejoud.pl:134
 msgid "Unacceptable radiobutton value."
 msgstr "Непозволительное значение радиокнопки."
 
-#: ../cgi-bin/oppejoud.pl:219
+#: ../cgi-bin/oppejoud.pl:239
 msgid "Or see the database"
 msgstr "Или смотрите базу данных"
 
-#: ../cgi-bin/oppejoud.pl:221
+#: ../cgi-bin/oppejoud.pl:241
 msgid "Want to know what others say about your professor?"
 msgstr "Хочешь знать, что другие говорят о твоем преподавателе?"
 
-#: ../cgi-bin/oppejoud.pl:222
+#: ../cgi-bin/oppejoud.pl:242
 msgid "Want to share your experience with other students?"
 msgstr "Хочешь поделиться своим опытом с другими?"
 
-#: ../cgi-bin/oppejoud.pl:223
+#: ../cgi-bin/oppejoud.pl:243
 msgid "You are in the right place!"
 msgstr "Ты попал в правильное место!"
 
-#: ../cgi-bin/oppejoud.pl:228 ../cgi-bin/oppejoud.pl:449
+#: ../cgi-bin/oppejoud.pl:248 ../cgi-bin/oppejoud.pl:463
 msgid "About the project"
 msgstr "О проекте"
 
-#: ../cgi-bin/oppejoud.pl:230
+#: ../cgi-bin/oppejoud.pl:250
 msgid ""
 "We are all different, and our goals are different as well. Some decide to go "
 "the easy way, while others prefer challenges.\n"
@@ -87,7 +91,7 @@ msgstr ""
 "другим же интереснее идти по сложному. К сожалению, учебные программы не "
 "идеальны и особенности студентов не учитываются."
 
-#: ../cgi-bin/oppejoud.pl:232
+#: ../cgi-bin/oppejoud.pl:252
 msgid ""
 "There were times when I wished professors demanded more from me (when the "
 "course was interesting and useful), other\n"
@@ -102,7 +106,7 @@ msgstr ""
 "времени, чем они стоили. А необходимые для специальности предметы остались "
 "на заднем плане."
 
-#: ../cgi-bin/oppejoud.pl:235
+#: ../cgi-bin/oppejoud.pl:255
 msgid ""
 "Today students in most universities are allowed not only to create their own "
 "schedules, but also to choose professors.\n"
@@ -114,7 +118,7 @@ msgstr ""
 "студентов должна быть возможность “познакомиться” со своим преподавателем, "
 "прежде чем начать ходить к нему на занятия."
 
-#: ../cgi-bin/oppejoud.pl:237
+#: ../cgi-bin/oppejoud.pl:257
 msgid ""
 "Right now there are not enough feedbacks about Estonian professors on the "
 "Internet. I am hoping this project will\n"
@@ -123,7 +127,7 @@ msgstr ""
 "В данным момент в интернете недостаточно информации об эстонских "
 "преподавателях. Надеюсь, что этот проект улучшит ситуацию."
 
-#: ../cgi-bin/oppejoud.pl:239
+#: ../cgi-bin/oppejoud.pl:259
 msgid ""
 "The main goal of this project is not to rate professors according to some "
 "scale. There are no perfect or bad professors,\n"
@@ -133,334 +137,295 @@ msgstr ""
 "идеальных или плохих преподавателей, просто каждый должен выбрать "
 "подходящего для себя."
 
-#: ../cgi-bin/oppejoud.pl:246
+#: ../cgi-bin/oppejoud.pl:266
 msgid "Recent comments:"
 msgstr "Последние комментарии:"
 
-#: ../cgi-bin/oppejoud.pl:251
+#: ../cgi-bin/oppejoud.pl:271
 msgid "Time added"
 msgstr "Время добавления"
 
-#: ../cgi-bin/oppejoud.pl:252
+#: ../cgi-bin/oppejoud.pl:272
 msgid "Professor"
 msgstr "Преподаватель"
 
-#: ../cgi-bin/oppejoud.pl:253
+#: ../cgi-bin/oppejoud.pl:273
 msgid "Comment"
 msgstr "Комментарий"
 
-#: ../cgi-bin/oppejoud.pl:263
+#: ../cgi-bin/oppejoud.pl:283
 msgid "No comments have been added yet."
 msgstr "Пока нет комментариев."
 
-#: ../cgi-bin/oppejoud.pl:267 ../cgi-bin/oppejoud.pl:451
+#: ../cgi-bin/oppejoud.pl:287 ../cgi-bin/oppejoud.pl:465
 msgid "Contact"
 msgstr "Контакт"
 
-#: ../cgi-bin/oppejoud.pl:269
+#: ../cgi-bin/oppejoud.pl:289
 msgid "Your comments and suggestions are welcome."
 msgstr "Буду рада твоим комментариям и предложениям."
 
-#: ../cgi-bin/oppejoud.pl:275 ../cgi-bin/oppejoud.pl:450
+#: ../cgi-bin/oppejoud.pl:295 ../cgi-bin/oppejoud.pl:464
 msgid "FAQ"
 msgstr ""
 
-#: ../cgi-bin/oppejoud.pl:277
+#: ../cgi-bin/oppejoud.pl:297
 msgid "Students"
-msgstr ""
+msgstr "Студенты"
 
-#: ../cgi-bin/oppejoud.pl:278
+#: ../cgi-bin/oppejoud.pl:298
 msgid "My professor is missing"
-msgstr ""
+msgstr "Моего преподавателя нет в базе данных"
 
-#: ../cgi-bin/oppejoud.pl:279
+#: ../cgi-bin/oppejoud.pl:299
 msgid ""
 "You can add a new name yourself. Just type the name into the search form and "
 "press ｢SEARCH｣. You will see a button that will lead you to a page where you "
 "will need to fill the required information (you only need first and last "
 "names)."
 msgstr ""
+"Любой может добавить преподавателя. Впиши его имя в форму для поиска и нажми "
+"｢ПОИСК｣. После этого увидишь кнопку, которая приведет на страницу, где надо "
+"будет заполнить требуемую информацию (нужно будет ввести только имя и "
+"фамилию преподавателя)."
 
-#: ../cgi-bin/oppejoud.pl:280
+#: ../cgi-bin/oppejoud.pl:300
 msgid ""
 "If you have a long list of names, I'd be happy if you contributed it (either "
 "in an automated way using the form mentioned above, or by simply"
 msgstr ""
+"Если у тебя есть длинный список имен, будет здорово, если ты предоставишь "
+"его (автоматизировано через форму, о которой говорилось ранее, или просто "
 
-#: ../cgi-bin/oppejoud.pl:280
+#: ../cgi-bin/oppejoud.pl:300
 msgid "sending the list to me"
-msgstr ""
+msgstr "прислав список"
 
-#: ../cgi-bin/oppejoud.pl:281
+#: ../cgi-bin/oppejoud.pl:301
 msgid "Professors"
-msgstr "Преподаватель"
+msgstr "Преподаватели"
 
-#: ../cgi-bin/oppejoud.pl:282
+#: ../cgi-bin/oppejoud.pl:302
 msgid "I do not want others to write things about me!"
-msgstr ""
+msgstr "Я не хочу, чтоб другие писали обо мне!"
 
-#: ../cgi-bin/oppejoud.pl:283
+#: ../cgi-bin/oppejoud.pl:303
 msgid "Why not? 😊"
-msgstr ""
+msgstr "Почему нет? 😊"
 
-#: ../cgi-bin/oppejoud.pl:284
-#, perl-format, perl-brace-format
+# perl-brace-format
+#: ../cgi-bin/oppejoud.pl:304
+#, fuzzy, perl-format, perl-brace-format
 msgid ""
 "Over {percent}% of feedbacks on this website are positive or neutral. If you "
 "are a great professor (and I hope you are!), then there is nothing to worry "
 "about."
 msgstr ""
+"Более {percent}% комментариев на этом сайте положительные или нейтральные. "
+"Если Вы отличный преподаватель (надеюсь, что это так!), то Вам не о чем "
+"беспокоиться."
 
-#: ../cgi-bin/oppejoud.pl:285
+#: ../cgi-bin/oppejoud.pl:305
 msgid ""
 "Somebody will always be unhappy, but that's OK. Consider it as an "
 "opportunity to improve yourself, and as a result to have an even better "
 "impact on our next generation of specialists!"
 msgstr ""
+"Кто-то всегда будет недоволен и это нормально. Воспринимайте это как "
+"возможность сделать себя лучше."
 
-#: ../cgi-bin/oppejoud.pl:286
+#: ../cgi-bin/oppejoud.pl:306
 msgid ""
 "My university already has a system for feedbacks, I like it more than your "
 "website"
 msgstr ""
+"В моем университете уже есть система для комментариев. Она мне нравится "
+"больше, чем этот сайт."
 
-#: ../cgi-bin/oppejoud.pl:287
+#: ../cgi-bin/oppejoud.pl:307
 msgid ""
 "Let's be honest here: how much do you care about feedbacks left in a non-"
 "public system of your university (do you even read them?), and how much do "
 "you care about things written on this website?"
 msgstr ""
+"Давайте будем честными: насколько Вас волнуют отзывы, оставленные в закрытой "
+"системе Вашего университета (читаете ли Вы их вообще?), и насколько Вас "
+"волнуют комментарии, написанные на этом сайте?"
 
-#: ../cgi-bin/oppejoud.pl:288
+#: ../cgi-bin/oppejoud.pl:308
 msgid ""
 "If your university was publishing all of the feedbacks, your name wouldn't "
 "be on this website."
 msgstr ""
+"Если бы университеты делали все отзывы публичными, этого сайта бы не "
+"существовало."
 
-#: ../cgi-bin/oppejoud.pl:289
+#: ../cgi-bin/oppejoud.pl:309
 msgid "Someone wrote lies about me!"
-msgstr ""
+msgstr "Кто-то написал ложь обо мне!"
 
-#: ../cgi-bin/oppejoud.pl:290
+#: ../cgi-bin/oppejoud.pl:310
 msgid ""
 "Feel free to leave a comment yourself to explain the situation. There have "
 "been cases like this."
-msgstr ""
+msgstr "Просто напишите комментарий и объясните ситуацию. Такое случается."
 
-#: ../cgi-bin/oppejoud.pl:291
-msgid "I DID NOT GIVE YOU A PERMISSION TO LIST MY NAME!"
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:292
-msgid ""
-"Here is the deal: find the law that prohibits this, and I will delete your "
-"name immediately. You can start from"
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:292
-msgid "here"
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:293
-msgid ""
-"To motivate your research, here is a counter of people who succeeded in "
-"this: 0"
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:294
-msgid "But I am not a professor!"
-msgstr "Добавь преподавателя!"
-
-#: ../cgi-bin/oppejoud.pl:295
-msgid ""
-"If you're not a professor and have never been one, then it is a valid reason "
-"for removal. After all, this website is about professors, and there is no "
-"point to pollute the list with names that are not associated with this "
-"purpose."
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:296
-msgid ""
-"The problem is that I have received enough emails from people claiming that "
-"they are not professors, but at the same time I can clearly see them in the "
-"study information system of their university. Some of them even had active "
-"courses that they were teaching at the time of writing."
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:297
-msgid "Here is a list of things to note if you want to apply for removal:"
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:299
-msgid ""
-"Your name should not be in a study system of any university. If you want all "
-"information about your teaching history removed, start from your university, "
-"not this website."
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:300
-msgid ""
-"If there are any existing comments, but you are not a professor anymore, "
-"make sure to let some time to pass (a few years). I am not interested in "
-"removing names from this website just to add them back in 6 months because "
-"you decided to take a break (or changed your mind, or whatever)."
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:301
-msgid ""
-"At any point in time anybody can add your name back. I'll do my best to make "
-"sure this is not done accidentally, but I am never going to prevent somebody "
-"from writing a comment."
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:303
-msgid ""
-"The process is very simple: just write me an email. I will answer within 3 "
-"weeks."
-msgstr ""
-
-#: ../cgi-bin/oppejoud.pl:310
+#: ../cgi-bin/oppejoud.pl:317
 #, perl-brace-format
 msgid "Please enter at least {count} symbols."
 msgstr "Пожалуйста введите хотя бы {count} символа."
 
-#: ../cgi-bin/oppejoud.pl:312
+#: ../cgi-bin/oppejoud.pl:319
 #, perl-brace-format
 msgid "Query can't be longer than {count} symbols."
 msgstr "Запрос не может быть длиннее {count} символов."
 
-#: ../cgi-bin/oppejoud.pl:316
+#: ../cgi-bin/oppejoud.pl:323
 #, perl-brace-format
 msgid "Search results ({name}):"
 msgstr "Результаты поиска ({name}):"
 
-#: ../cgi-bin/oppejoud.pl:330
+#: ../cgi-bin/oppejoud.pl:337
 msgid "Sorry, nothing was found."
 msgstr "К сожалению, ничего не было найдено."
 
-#: ../cgi-bin/oppejoud.pl:342
+#: ../cgi-bin/oppejoud.pl:349
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../cgi-bin/oppejoud.pl:343
+#: ../cgi-bin/oppejoud.pl:350
 #, perl-brace-format
 msgid "Nothing was found for your query ({name})."
 msgstr "К сожалению, по Вашему запросу ({name}) ничего не было найдено."
 
-#: ../cgi-bin/oppejoud.pl:363
+#: ../cgi-bin/oppejoud.pl:370
 msgid "Please fill both fields."
 msgstr "Пожалуйста заполните оба поля."
 
-#: ../cgi-bin/oppejoud.pl:373
+#: ../cgi-bin/oppejoud.pl:380
 msgid "This professor already exists in the database."
 msgstr "Этот преподаватель уже существует в базе данных."
 
-#: ../cgi-bin/oppejoud.pl:374
+#: ../cgi-bin/oppejoud.pl:381
 msgid "View page"
 msgstr "Смотреть страницу"
 
-#: ../cgi-bin/oppejoud.pl:418
+#: ../cgi-bin/oppejoud.pl:425
 #, perl-brace-format
 msgid "All professors ({count}):"
 msgstr "Все преподаватели ({count}):"
 
-#: ../cgi-bin/oppejoud.pl:420
+#: ../cgi-bin/oppejoud.pl:427
 msgid "No professors have been added yet."
 msgstr ""
 
-#: ../cgi-bin/oppejoud.pl:448
+#: ../cgi-bin/oppejoud.pl:462
 msgid "Recent comments"
 msgstr "Последние комментарии"
 
-#: ../cgi-bin/oppejoud.pl:485 ../cgi-bin/oppejoud.pl:566
+#: ../cgi-bin/oppejoud.pl:479 ../cgi-bin/oppejoud.pl:567
 msgid "Find a perfectly suitable professor!"
 msgstr "Найди преподавателя, подходящего именно тебе!"
 
-#: ../cgi-bin/oppejoud.pl:495
+#: ../cgi-bin/oppejoud.pl:489
 msgid "Enter professor's name:"
 msgstr "Введите имя преподавателя:"
 
-#: ../cgi-bin/oppejoud.pl:511
+#: ../cgi-bin/oppejoud.pl:505
 msgid "SEARCH"
 msgstr "ИСКАТЬ"
 
-#: ../cgi-bin/oppejoud.pl:544
+#: ../cgi-bin/oppejoud.pl:538
 msgid "Couldn't find yours? Enter it manually."
 msgstr "Не можешь найти свой? Впиши его сам."
 
-#: ../cgi-bin/oppejoud.pl:591
+#: ../cgi-bin/oppejoud.pl:592
 msgid "Add a new professor"
 msgstr "Добавь преподавателя"
 
-#: ../cgi-bin/oppejoud.pl:597
+#: ../cgi-bin/oppejoud.pl:598
 msgid "Professor's name"
 msgstr "Имя преподавателя"
 
-#: ../cgi-bin/oppejoud.pl:604
+#: ../cgi-bin/oppejoud.pl:605
 msgid "Professor's lastname"
 msgstr "Фамилия преподавателя"
 
-#: ../cgi-bin/oppejoud.pl:619
+#: ../cgi-bin/oppejoud.pl:620
 msgid "ADD"
 msgstr "ДОБАВИТЬ"
 
-#: ../cgi-bin/oppejoud.pl:643
+#: ../cgi-bin/oppejoud.pl:644
 #, perl-brace-format
 msgid "Professor: {name}"
 msgstr "Преподаватель: {name}"
 
-#: ../cgi-bin/oppejoud.pl:644
+#: ../cgi-bin/oppejoud.pl:645
 msgid "Add a comment"
 msgstr "Добавить комментарий"
 
-#: ../cgi-bin/oppejoud.pl:646
+#: ../cgi-bin/oppejoud.pl:647
 msgid "Comments:"
 msgstr "Комментарии:"
 
-#: ../cgi-bin/oppejoud.pl:649
+#: ../cgi-bin/oppejoud.pl:650
 msgid "Comments were not added yet."
 msgstr "Пока нет комментариев."
 
-#: ../cgi-bin/oppejoud.pl:673 ../cgi-bin/oppejoud.pl:707
+#: ../cgi-bin/oppejoud.pl:674 ../cgi-bin/oppejoud.pl:710
 msgid "University:"
 msgstr "Университет:"
 
-#: ../cgi-bin/oppejoud.pl:674
+#: ../cgi-bin/oppejoud.pl:675
 msgid "Course:"
 msgstr "Предмет:"
 
-#: ../cgi-bin/oppejoud.pl:691
+#: ../cgi-bin/oppejoud.pl:677
+msgid ""
+"This comment was tagged as “suspicious”. Possible reasons are: someone "
+"writing multiple angry comments at once; a professor writing comments about "
+"themselves, etc."
+msgstr "Этот комментарий был помечен как “подозрительный”. Возможные причины: кто-то написал много злых комментариев за раз; профессор пишет комментарии о себе; и т.д."
+
+#: ../cgi-bin/oppejoud.pl:678
+msgid "This comment was tagged as a response by the professor."
+msgstr "Этот комментарий был помечен как ответ профессора."
+
+#: ../cgi-bin/oppejoud.pl:694
 msgid "Add your comment:"
 msgstr "Добавь свой комментарий:"
 
-#: ../cgi-bin/oppejoud.pl:709
+#: ../cgi-bin/oppejoud.pl:712
 msgid "Course name:"
 msgstr "Название предмета:"
 
-#: ../cgi-bin/oppejoud.pl:717
+#: ../cgi-bin/oppejoud.pl:720
 msgid "Comment:"
 msgstr "Комментарий:"
 
-#: ../cgi-bin/oppejoud.pl:727
+#: ../cgi-bin/oppejoud.pl:730
 msgid "General impression:"
 msgstr "Обшее впечатление:"
 
-#: ../cgi-bin/oppejoud.pl:733
+#: ../cgi-bin/oppejoud.pl:736
 msgid "bad"
 msgstr "плохо"
 
-#: ../cgi-bin/oppejoud.pl:733
+#: ../cgi-bin/oppejoud.pl:736
 msgid "neutral"
 msgstr "нейтрально"
 
-#: ../cgi-bin/oppejoud.pl:733
+#: ../cgi-bin/oppejoud.pl:736
 msgid "good"
 msgstr "хорошо"
 
-#: ../cgi-bin/oppejoud.pl:739
+#: ../cgi-bin/oppejoud.pl:742
 msgid "SEND"
 msgstr "ОТПРАВИТЬ"
 
-#: ../cgi-bin/oppejoud.pl:845
+#: ../cgi-bin/oppejoud.pl:848
 msgid "Add a new professor!"
 msgstr "Добавь преподавателя!"
+
+#~ msgid "But I am not a professor!"
+#~ msgstr "Добавь преподавателя!"
