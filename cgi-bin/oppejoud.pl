@@ -122,6 +122,8 @@ if (getParam('action') eq 'write') {
         commentError(__ 'Please enter a course name.');
     } elsif (not defined $comment or $comment eq '') {
         commentError(__ 'Please enter a comment.');
+    } elsif ($comment =~ /adalafil|cialis|a href|https/i) {
+        commentError(__ 'Spam is not allowed.');
     } elsif ($name !~ /$nameRegex/) {
         commentError(__ 'Only letters, hyphens and spaces are allowed.');
     } elsif (length($comment) > 2000) {
