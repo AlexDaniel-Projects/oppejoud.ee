@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -ptgo -A -X -d -r -- data/ data-backup

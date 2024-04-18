@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync -ptgo -A -X -d -r -- data/ "data_$(date +%Y-%m-%dT%H%M%S)"
+rsync -ptgo -A -X -d -r -- data-backup/ data
