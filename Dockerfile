@@ -12,7 +12,7 @@ COPY ./cgi-bin/ /usr/local/apache2/cgi-bin/
 COPY ./config/  /usr/local/apache2/config/
 
 WORKDIR /usr/local/apache2/config/
-RUN apt-get install -y make && make update-mo && make install
+RUN apt-get install -y make gettext && make update-mo && make install
 WORKDIR /usr/local/apache2/
 
 # Set permissions to www-data, there's seems to be no other way to do that
