@@ -40,7 +40,7 @@ use Locale::Messages qw (LC_MESSAGES bind_textdomain_filter);
 $ENV{OUTPUT_CHARSET} = 'UTF-8';
 bind_textdomain_filter 'ee.oppejoud' => \&Encode::decode_utf8;
 
-use Locale::TextDomain ('ee.oppejoud', '../config/LocaleData');
+use Locale::TextDomain ('ee.oppejoud', '/usr/local/apache2/config/LocaleData');
 
 setlocale (LC_MESSAGES, "");
 
