@@ -42,7 +42,7 @@ bind_textdomain_filter 'ee.oppejoud' => \&Encode::decode_utf8;
 
 use Locale::TextDomain ('ee.oppejoud', '/usr/local/apache2/config/LocaleData');
 
-setlocale (LC_MESSAGES, "");
+setlocale (LC_MESSAGES, "et_EE.UTF-8");
 
 $CGI::POST_MAX = 1024 * 10;
 
