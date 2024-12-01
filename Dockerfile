@@ -2,7 +2,12 @@ FROM httpd:2.4.59
 
 RUN apt-get update
 RUN apt-get install -y libcgi-pm-perl libcapture-tiny-perl libdatetime-perl libcapture-tiny-perl libgeo-ip-perl
-RUN apt-get install -y libjson-xs-perl libintl-perl libxml-rss-perl libdatetime-format-strptime-perl make gettext
+RUN apt-get install -y libjson-xs-perl libintl-perl libxml-rss-perl libdatetime-format-strptime-perl make gettext locales
+
+# Generate locales for translations
+RUN echo "et_EE.UTF-8 UTF-8" >> /etc/locale.gen && \
+    echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen && \
+    locale-gen
 
 COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf-extra
 RUN cat /usr/local/apache2/conf/httpd.conf-extra >> /usr/local/apache2/conf/httpd.conf
