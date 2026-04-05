@@ -290,6 +290,33 @@ improve the situation.');
     print $q->p('alex.jakimenko+oppejoud@gmail.com');
     print $q->end_div();
     printEndHtml();
+} elsif (getParam('action') eq 'privacy') {
+    printAllHeaders();
+    print $q->h1({-class => 'specialHeading'}, 'Privaatsuspoliitika');
+    print $q->start_div({-class => 'content', -id => 'privacy'});
+    print $q->h2('Vastutav töötleja');
+    print $q->p('Seda veebilehte haldab Aleks-Daniel Jakimenko-Aleksejev. Privaatsusega seotud küsimuste korral kasutage kontaktlehte.');
+    print $q->h2('Milliseid andmeid töötleme');
+    print $q->p('Töötleme järgmisi andmeid:');
+    print $q->start_ul();
+    print $q->li('Õppejõudude nimed ja ülikoolid.');
+    print $q->li('Kasutajate esitatud kommentaarid ja ainete nimed, mis on salvestatud veebilehel avalikult kuvatava sisuna.');
+    print $q->li('IP-aadresse säilitatakse lühikese aja jooksul, mis on vajalik turvalisuse ja rämpsposti vältimise eesmärgil, ning need ei ole avalikult nähtavad.');
+    print $q->li('Teie brauserisse salvestatud keeleeelistuse küpsis, mis ei sisalda isikuandmeid.');
+    print $q->end_ul();
+    print $q->p('Õppejõudude nimed ja kommentaarid on avalikult kättesaadavad veebilehel.');
+    print $q->p('Õppejõudude lehed tekivad kasutajate tegevuse tulemusena ning ei kujuta endast ametlikku registrit.');
+    print $q->p('Kommentaare saab esitada anonüümselt ning kasutajakontosid ei looda.');
+    print $q->h2('Õiguslik alus');
+    print $q->p('Kasutame andmete töötlemise õigusliku alusena õigustatud huvi (IKÜM artikkel 6(1)(f)). Õppejõud tegutsevad avalikus ametlikus rollis ning läbipaistev tagasiside õpetamise kvaliteedi kohta on avalikes huvides, aidates üliõpilastel teha teadlikke akadeemilisi valikuid. Oleme hinnanud, et see huvi ei kaalu üle asjaomaste isikute põhiõigusi ja vabadusi, kuna kommentaarid piirduvad erialase tegevusega.');
+    print $q->p('Me ei luba ebaseaduslikku, solvavat ega faktiväiteid sisaldavat sisu, mida ei ole võimalik põhjendada, ning jätame endale õiguse selline sisu eemaldada.');
+    print $q->h2('Andmete säilitamine');
+    print $q->p('Andmeid säilitatakse seni, kuni need on vajalikud nimetatud eesmärkide täitmiseks või kuni esitatakse põhjendatud kustutamistaotlus.');
+    print $q->h2('Teie õigused');
+    print $q->p('IKÜM alusel on teil õigus saada juurdepääs oma isikuandmetele, neid parandada, kustutada, piirata nende töötlemist ja esitada sellele vastuväiteid. Õiguste kasutamiseks kasutage kontaktlehte.');
+    print $q->p('Vastuväite või kustutamistaotluse korral hindame iga juhtumit eraldi, võttes arvesse nii andmesubjekti õigusi kui ka meie õigustatud huvi tagada avalik tagasiside õpetamise kvaliteedi kohta.');
+    print $q->end_div();
+    printEndHtml();
 } elsif (getParam('action') eq 'faq') {
     printAllHeaders();
     print $q->h1({-class => 'specialHeading'}, __ 'FAQ');
@@ -829,6 +856,9 @@ sub commentError {
 sub printEndHtml {
     print $q->end_div(); # close '#body'
     print $q->end_div(); # close '#container'
+    print '<footer>';
+    print $q->a({href => '?action=privacy'}, __ 'Privacy Policy');
+    print '</footer>';
     if (getParam('action') eq '' or getParam('action') eq 'search') {
         print q{<script src='/js/awesomplete.js'></script>};
     } else {

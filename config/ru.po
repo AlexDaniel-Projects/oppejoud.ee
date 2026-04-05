@@ -427,5 +427,8 @@ msgstr "ОТПРАВИТЬ"
 msgid "Add a new professor!"
 msgstr "Добавь преподавателя!"
 
+msgid "Privacy Policy"
+msgstr "Конфиденциальность"
+
 #~ msgid "But I am not a professor!"
 #~ msgstr "Добавь преподавателя!"

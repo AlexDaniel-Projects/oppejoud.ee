@@ -424,6 +424,9 @@ msgstr "SAADA"
 msgid "Add a new professor!"
 msgstr "Lisa õppejõud!"
 
+msgid "Privacy Policy"
+msgstr "Privaatsus"
+
 #~ msgid "I DID NOT GIVE YOU A PERMISSION TO LIST MY NAME!"
 #~ msgstr "ILMA MINU NÕUSOLEKUTA EI TOHI TE MINU NIME KASUTADA!"
 

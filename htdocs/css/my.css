@@ -21,6 +21,13 @@ body {
     color: #2D397F !important;
     text-align: center;
     font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#container {
+    flex: 1;
 }
 
 #navbar {
@@ -756,4 +763,25 @@ div.awesomplete li[aria-selected="true"] mark {
     font-weight: bold;
     font-style: oblique;
     padding: 0 3rem;
+}
+
+footer {
+    width: 100%;
+    background-color: #20295B;
+    box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.16),0 -2px 10px 0 rgba(0,0,0,0.12) !important;
+    text-align: right;
+    padding: 0;
+    font-size: 18px;
+}
+
+footer a, footer a:visited, footer a:visited:hover {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff !important;
+    border: none;
+    padding: 8px 24px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
