@@ -1,4 +1,4 @@
-var CACHE_NAME = 'oppejoud-cache-v1';
+var CACHE_NAME = 'oppejoud-cache-v2';
 var urlsToCache = [
     '/',
     '/css/awesomplete.css',
@@ -15,6 +15,20 @@ self.addEventListener('install', function(event) {
                 console.log('Opened cache');
                 return cache.addAll(urlsToCache);
             })
+    );
+});
+
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                cacheNames.filter(function(name) {
+                    return name !== CACHE_NAME;
+                }).map(function(name) {
+                    return caches.delete(name);
+                })
+            );
+        })
     );
 });
 
